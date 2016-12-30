@@ -20,16 +20,16 @@ A simple form validation library written in Swift 3.0.
   * Digit-only
   * Equalty (an input value equals to another inputs value)
 
-## Demo
-```
-pod try EGFormValidator
-```
-  
 * Custom validators
 
 * Validates any `UITextField` or `UITextView` or you can create your own validatable input fields
 
 * Add custom styles to highlight invalid input fields
+
+## Demo
+```
+pod try EGFormValidator
+```
 
 ## Requirements
 
