@@ -26,9 +26,51 @@ A simple form validation library written in Swift 3.0.
 
 * Add custom styles to highlight invalid input fields
 
+## Requirements
+
+- iOS 8.0+
+- Xcode 8.2+
+- Swift 3.0+
 
 ## Installation
-Pods are commming soon
+The recommended approach to use _EGFormValidator_ in your project is using the [CocoaPods](http://cocoapods.org/) package manager, as it provides flexible dependency management and dead simple installation.
+
+#### CocoaPods
+
+Install CocoaPods if not already available:
+
+``` bash
+$ [sudo] gem install cocoapods
+$ pod setup
+```
+Go to the directory of your Xcode project, and Create and Edit your Podfile and add _EGFormValidator_ to your corresponding `TargetName`:
+
+``` bash
+$ cd /path/to/MyProject
+$ touch Podfile
+$ edit Podfile
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target 'TargetName' do
+    pod 'EGFormValidator'
+end
+```
+
+Install into your project:
+
+``` bash
+$ pod install
+```
+
+Open your project in Xcode from the .xcworkspace file (not the usual project file):
+
+``` bash
+$ open MyProject.xcworkspace
+```
+
+You can now `import EGFormValidator` framework into your files.
 
 
 ## Usage
