@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode8.2
 script:
-  - xcodebuild -scheme EGFormValidator -workspace EGFormValidator.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.0' build test
+  - xcodebuild -scheme EGFormValidator -project EGFormValidator.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.0' build test
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J 'EGFormValidator' -t 3141394f-e49c-4a39-8ba7-e2d88f44390c
+  - bash <(curl -s https://codecov.io/bash) -J 'EGFormValidator'
