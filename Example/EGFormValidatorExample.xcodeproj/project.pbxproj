@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57DE77CA1E16B48A00D5EE81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77C91E16B48A00D5EE81 /* AppDelegate.swift */; };
+		57DE77CC1E16B48A00D5EE81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77CB1E16B48A00D5EE81 /* ViewController.swift */; };
+		57DE77CF1E16B48A00D5EE81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DE77CD1E16B48A00D5EE81 /* Main.storyboard */; };
+		57DE77D11E16B48A00D5EE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DE77D01E16B48A00D5EE81 /* Assets.xcassets */; };
+		57DE77D41E16B48A00D5EE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DE77D21E16B48A00D5EE81 /* LaunchScreen.storyboard */; };
+		57DE77DF1E16B48A00D5EE81 /* EGFormValidatorExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77DE1E16B48A00D5EE81 /* EGFormValidatorExampleTests.swift */; };
+		57DE77EA1E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77E91E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift */; };
+		E6290F04C0A15F5C4D0B1B1E /* Pods_EGFormValidatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410C2981A7C0CE6CB89B388E /* Pods_EGFormValidatorExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57DE77DB1E16B48A00D5EE81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57DE77BE1E16B48A00D5EE81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57DE77C51E16B48A00D5EE81;
+			remoteInfo = EGFormValidatorExample;
+		};
+		57DE77E61E16B48A00D5EE81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57DE77BE1E16B48A00D5EE81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57DE77C51E16B48A00D5EE81;
+			remoteInfo = EGFormValidatorExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BB3CA5908240F640DB4FEF5 /* Pods-EGFormValidatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFormValidatorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGFormValidatorExample/Pods-EGFormValidatorExample.release.xcconfig"; sourceTree = "<group>"; };
+		410C2981A7C0CE6CB89B388E /* Pods_EGFormValidatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGFormValidatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FFD284656AE4BC0BEA2563E /* Pods-EGFormValidatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGFormValidatorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGFormValidatorExample/Pods-EGFormValidatorExample.debug.xcconfig"; sourceTree = "<group>"; };
+		57DE77C61E16B48A00D5EE81 /* EGFormValidatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGFormValidatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DE77C91E16B48A00D5EE81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57DE77CB1E16B48A00D5EE81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57DE77CE1E16B48A00D5EE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57DE77D01E16B48A00D5EE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57DE77D31E16B48A00D5EE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57DE77D51E16B48A00D5EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DE77DA1E16B48A00D5EE81 /* EGFormValidatorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFormValidatorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DE77DE1E16B48A00D5EE81 /* EGFormValidatorExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFormValidatorExampleTests.swift; sourceTree = "<group>"; };
+		57DE77E01E16B48A00D5EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DE77E51E16B48A00D5EE81 /* EGFormValidatorExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFormValidatorExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DE77E91E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFormValidatorExampleUITests.swift; sourceTree = "<group>"; };
+		57DE77EB1E16B48A00D5EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57DE77C31E16B48A00D5EE81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6290F04C0A15F5C4D0B1B1E /* Pods_EGFormValidatorExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DE77D71E16B48A00D5EE81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DE77E21E16B48A00D5EE81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57DE77BD1E16B48A00D5EE81 = {
+			isa = PBXGroup;
+			children = (
+				57DE77C81E16B48A00D5EE81 /* EGFormValidatorExample */,
+				57DE77DD1E16B48A00D5EE81 /* EGFormValidatorExampleTests */,
+				57DE77E81E16B48A00D5EE81 /* EGFormValidatorExampleUITests */,
+				57DE77C71E16B48A00D5EE81 /* Products */,
+				91F05136B057F4E1A2AADB13 /* Pods */,
+				F13C71AF62B7BC1AED4A42D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57DE77C71E16B48A00D5EE81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57DE77C61E16B48A00D5EE81 /* EGFormValidatorExample.app */,
+				57DE77DA1E16B48A00D5EE81 /* EGFormValidatorExampleTests.xctest */,
+				57DE77E51E16B48A00D5EE81 /* EGFormValidatorExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57DE77C81E16B48A00D5EE81 /* EGFormValidatorExample */ = {
+			isa = PBXGroup;
+			children = (
+				57DE77C91E16B48A00D5EE81 /* AppDelegate.swift */,
+				57DE77CB1E16B48A00D5EE81 /* ViewController.swift */,
+				57DE77CD1E16B48A00D5EE81 /* Main.storyboard */,
+				57DE77D01E16B48A00D5EE81 /* Assets.xcassets */,
+				57DE77D21E16B48A00D5EE81 /* LaunchScreen.storyboard */,
+				57DE77D51E16B48A00D5EE81 /* Info.plist */,
+			);
+			path = EGFormValidatorExample;
+			sourceTree = "<group>";
+		};
+		57DE77DD1E16B48A00D5EE81 /* EGFormValidatorExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				57DE77DE1E16B48A00D5EE81 /* EGFormValidatorExampleTests.swift */,
+				57DE77E01E16B48A00D5EE81 /* Info.plist */,
+			);
+			path = EGFormValidatorExampleTests;
+			sourceTree = "<group>";
+		};
+		57DE77E81E16B48A00D5EE81 /* EGFormValidatorExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57DE77E91E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift */,
+				57DE77EB1E16B48A00D5EE81 /* Info.plist */,
+			);
+			path = EGFormValidatorExampleUITests;
+			sourceTree = "<group>";
+		};
+		91F05136B057F4E1A2AADB13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FFD284656AE4BC0BEA2563E /* Pods-EGFormValidatorExample.debug.xcconfig */,
+				1BB3CA5908240F640DB4FEF5 /* Pods-EGFormValidatorExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F13C71AF62B7BC1AED4A42D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				410C2981A7C0CE6CB89B388E /* Pods_EGFormValidatorExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57DE77C51E16B48A00D5EE81 /* EGFormValidatorExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57DE77EE1E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExample" */;
+			buildPhases = (
+				A36D44F7DEB6F1232676056E /* [CP] Check Pods Manifest.lock */,
+				57DE77C21E16B48A00D5EE81 /* Sources */,
+				57DE77C31E16B48A00D5EE81 /* Frameworks */,
+				57DE77C41E16B48A00D5EE81 /* Resources */,
+				821195BF756D4CC0F8D9D973 /* [CP] Embed Pods Frameworks */,
+				4D4F12CAD036333666E704C0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EGFormValidatorExample;
+			productName = EGFormValidatorExample;
+			productReference = 57DE77C61E16B48A00D5EE81 /* EGFormValidatorExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57DE77D91E16B48A00D5EE81 /* EGFormValidatorExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57DE77F11E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExampleTests" */;
+			buildPhases = (
+				57DE77D61E16B48A00D5EE81 /* Sources */,
+				57DE77D71E16B48A00D5EE81 /* Frameworks */,
+				57DE77D81E16B48A00D5EE81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57DE77DC1E16B48A00D5EE81 /* PBXTargetDependency */,
+			);
+			name = EGFormValidatorExampleTests;
+			productName = EGFormValidatorExampleTests;
+			productReference = 57DE77DA1E16B48A00D5EE81 /* EGFormValidatorExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57DE77E41E16B48A00D5EE81 /* EGFormValidatorExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57DE77F41E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExampleUITests" */;
+			buildPhases = (
+				57DE77E11E16B48A00D5EE81 /* Sources */,
+				57DE77E21E16B48A00D5EE81 /* Frameworks */,
+				57DE77E31E16B48A00D5EE81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57DE77E71E16B48A00D5EE81 /* PBXTargetDependency */,
+			);
+			name = EGFormValidatorExampleUITests;
+			productName = EGFormValidatorExampleUITests;
+			productReference = 57DE77E51E16B48A00D5EE81 /* EGFormValidatorExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57DE77BE1E16B48A00D5EE81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Evgeny Gushchin";
+				TargetAttributes = {
+					57DE77C51E16B48A00D5EE81 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					57DE77D91E16B48A00D5EE81 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 57DE77C51E16B48A00D5EE81;
+					};
+					57DE77E41E16B48A00D5EE81 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 57DE77C51E16B48A00D5EE81;
+					};
+				};
+			};
+			buildConfigurationList = 57DE77C11E16B48A00D5EE81 /* Build configuration list for PBXProject "EGFormValidatorExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57DE77BD1E16B48A00D5EE81;
+			productRefGroup = 57DE77C71E16B48A00D5EE81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57DE77C51E16B48A00D5EE81 /* EGFormValidatorExample */,
+				57DE77D91E16B48A00D5EE81 /* EGFormValidatorExampleTests */,
+				57DE77E41E16B48A00D5EE81 /* EGFormValidatorExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57DE77C41E16B48A00D5EE81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DE77D41E16B48A00D5EE81 /* LaunchScreen.storyboard in Resources */,
+				57DE77D11E16B48A00D5EE81 /* Assets.xcassets in Resources */,
+				57DE77CF1E16B48A00D5EE81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DE77D81E16B48A00D5EE81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DE77E31E16B48A00D5EE81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D4F12CAD036333666E704C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFormValidatorExample/Pods-EGFormValidatorExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		821195BF756D4CC0F8D9D973 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGFormValidatorExample/Pods-EGFormValidatorExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A36D44F7DEB6F1232676056E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57DE77C21E16B48A00D5EE81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DE77CC1E16B48A00D5EE81 /* ViewController.swift in Sources */,
+				57DE77CA1E16B48A00D5EE81 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DE77D61E16B48A00D5EE81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DE77DF1E16B48A00D5EE81 /* EGFormValidatorExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DE77E11E16B48A00D5EE81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DE77EA1E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57DE77DC1E16B48A00D5EE81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57DE77C51E16B48A00D5EE81 /* EGFormValidatorExample */;
+			targetProxy = 57DE77DB1E16B48A00D5EE81 /* PBXContainerItemProxy */;
+		};
+		57DE77E71E16B48A00D5EE81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57DE77C51E16B48A00D5EE81 /* EGFormValidatorExample */;
+			targetProxy = 57DE77E61E16B48A00D5EE81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57DE77CD1E16B48A00D5EE81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57DE77CE1E16B48A00D5EE81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57DE77D21E16B48A00D5EE81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57DE77D31E16B48A00D5EE81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57DE77EC1E16B48A00D5EE81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57DE77ED1E16B48A00D5EE81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57DE77EF1E16B48A00D5EE81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFD284656AE4BC0BEA2563E /* Pods-EGFormValidatorExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EGFormValidatorExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		57DE77F01E16B48A00D5EE81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB3CA5908240F640DB4FEF5 /* Pods-EGFormValidatorExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EGFormValidatorExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		57DE77F21E16B48A00D5EE81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EGFormValidatorExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EGFormValidatorExample.app/EGFormValidatorExample";
+			};
+			name = Debug;
+		};
+		57DE77F31E16B48A00D5EE81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EGFormValidatorExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EGFormValidatorExample.app/EGFormValidatorExample";
+			};
+			name = Release;
+		};
+		57DE77F51E16B48A00D5EE81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = EGFormValidatorExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EGFormValidatorExample;
+			};
+			name = Debug;
+		};
+		57DE77F61E16B48A00D5EE81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = EGFormValidatorExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EGFormValidatorExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57DE77C11E16B48A00D5EE81 /* Build configuration list for PBXProject "EGFormValidatorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DE77EC1E16B48A00D5EE81 /* Debug */,
+				57DE77ED1E16B48A00D5EE81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57DE77EE1E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DE77EF1E16B48A00D5EE81 /* Debug */,
+				57DE77F01E16B48A00D5EE81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		57DE77F11E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DE77F21E16B48A00D5EE81 /* Debug */,
+				57DE77F31E16B48A00D5EE81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		57DE77F41E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DE77F51E16B48A00D5EE81 /* Debug */,
+				57DE77F61E16B48A00D5EE81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57DE77BE1E16B48A00D5EE81 /* Project object */;
+}
