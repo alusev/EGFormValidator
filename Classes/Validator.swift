@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // Declares custom validation method
-typealias ValidatorPredicate = (Any?, [Any?]) -> Bool
+public typealias ValidatorPredicate = (Any?, [Any?]) -> Bool
 
 
 public struct Validator {
@@ -29,6 +29,14 @@ public struct Validator {
     // an error message when the control fails validation
     var errorMessage: String
 
+    
+    public init(control: Validatable?, predicate: @escaping ValidatorPredicate, predicateParameters: [Any?], errorPlaceholder: ValidationErrorDisplayable?, errorMessage: String) {
+        self.control = control
+        self.predicate = predicate
+        self.predicateParameters = predicateParameters
+        self.errorPlaceholder = errorPlaceholder
+        self.errorMessage = errorMessage
+    }
     
     
     /**
