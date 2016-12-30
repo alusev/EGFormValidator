@@ -14,6 +14,8 @@ Availables built-in form validators:
 * Email
 
 It is also extendable, so you can easily create your own input validator.
+
+Add custom styles to highlight invalid input fields
                        DESC
   s.homepage         = 'https://github.com/alusev/EGFormValidator'
 
