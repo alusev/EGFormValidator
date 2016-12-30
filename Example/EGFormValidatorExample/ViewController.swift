@@ -65,7 +65,40 @@ class ViewController: ValidatorViewController {
     //
     // Add validators
     func addValidators() {
-        self.addMandatoryValidation(control: self.mandatoryTextField, errorPlaceholder: self.mandatoryErrorLabel, errorMessage: "This field is required!")
+        
+        // Add mandatory validator
+        self.addMandatoryValidation(control: self.mandatoryTextField,
+                           errorPlaceholder: self.mandatoryErrorLabel,
+                               errorMessage: "This field is required")
+        
+        
+        
+        // Add minlength validator
+        self.addValidation(control: self.minLengthTextField,
+                         minLength: 8,
+                  errorPlaceholder: self.minLengthErrorLabel,
+                      errorMessage: "Enter at least %d characters")
+        
+        
+        
+        // Email validator
+        self.addEmailValidation(control: self.emailTextField,
+                       errorPlaceholder: self.emailErrorLabel,
+                           errorMessage: "Email is invalid")
+        
+        
+        // Add digits only validator
+        self.addDigitsOnlyValidation(control: self.digitsOnlyTextField,
+                            errorPlaceholder: self.digitsOnlyErrorLabel,
+                                errorMessage: "Some of the characters are not digits")
+        
+        
+        
+        // Equalty validator
+        self.addValidation(control: self.equaltyTextField_1,
+                           equalTo: self.equaltyTextField_2,
+                           errorPlaceholder: self.equaltyErrorLabel,
+                           errorMessage: "The strings don't match")
     }
     
     
@@ -75,7 +108,16 @@ class ViewController: ValidatorViewController {
     //
     // Perform validation
     @IBAction func validateButtonTapped(_ sender: Any) {
+        
         if self.validate() {
+            // show success alert
+            let alert = UIAlertController(title: "Congratulations!",
+                                          message: "All fields are valid",
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
             
         } else {
             // scroll to the first invalid input field
