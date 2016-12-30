@@ -2,7 +2,7 @@
 A simple form validation library written in Swift 3.0.
 
 [![Swift][swift-badge]][swift-url]
-[![Build Status](https://travis-ci.org/alusev/FormValidator.svg?branch=master)](https://travis-ci.org/alusev/FormValidator)
+[![Build Status](https://travis-ci.org/alusev/EGFormValidator.svg?branch=master)](https://travis-ci.org/alusev/EGFormValidator)
 [![codecov](https://codecov.io/gh/alusev/FormValidator/branch/master/graph/badge.svg)](https://codecov.io/gh/alusev/FormValidator)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/alusev/FormValidator/blob/master/LICENSE)
 
