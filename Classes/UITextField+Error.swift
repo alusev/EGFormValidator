@@ -11,7 +11,7 @@ import UIKit
 extension UITextField: Validatable {
     
     // MARK - Validatable Protocol Implementation
-    func getValue() -> Any? {
+    public func getValue() -> Any? {
         return self.text
     }
     

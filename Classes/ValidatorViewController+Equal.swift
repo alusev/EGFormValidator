@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ValidatorViewController {
+public extension ValidatorViewController {
     /**
      * Verifies if given value is not empty
      */
@@ -67,7 +67,7 @@ extension ValidatorViewController {
     /**
      * Validator method
      */
-    func addValidation<UIViewThatConformsValidatableProtocol: UIView>
+    public func addValidation<UIViewThatConformsValidatableProtocol: UIView>
                                         (control control1: UIViewThatConformsValidatableProtocol?,
                                 equalTo control2: UIViewThatConformsValidatableProtocol?,
                                 errorPlaceholder: ValidationErrorDisplayable?,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ValidationErrorDisplayable {
+public protocol ValidationErrorDisplayable {
     
     // a control must be able to show error
     func setErrorMessage(errorMessage: String?)

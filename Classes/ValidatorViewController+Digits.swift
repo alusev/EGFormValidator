@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ValidatorViewController {
+public extension ValidatorViewController {
     /**
      * Digit Validator
      */
@@ -22,7 +22,7 @@ extension ValidatorViewController {
     }
     
 
-    func addDigitsOnlyValidation<UIViewThatConformsValidatableProtocol: UIView>
+    public func addDigitsOnlyValidation<UIViewThatConformsValidatableProtocol: UIView>
                     (control: UIViewThatConformsValidatableProtocol?,
                      errorPlaceholder: ValidationErrorDisplayable?,
                      errorMessage: String = "Únicamente dígitos")

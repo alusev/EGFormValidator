@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ValidatorViewController {
+public extension ValidatorViewController {
     /**
      * Email Validator
      */
@@ -21,7 +21,7 @@ extension ValidatorViewController {
     
     
     
-    func addEmailValidation<UIViewThatConformsValidatableProtocol: UIView>
+    public func addEmailValidation<UIViewThatConformsValidatableProtocol: UIView>
                                             (control: UIViewThatConformsValidatableProtocol?,
                                     errorPlaceholder: ValidationErrorDisplayable?,
                                         errorMessage: String = "El correo electrónico es inválido")

@@ -26,7 +26,7 @@ extension ValidatorViewController {
     /**
      * Validator method
      */
-    func addValidation<UIViewThatConformsValidatableProtocol: UIView>
+    public func addValidation<UIViewThatConformsValidatableProtocol: UIView>
                                                  (control: UIViewThatConformsValidatableProtocol?,
                                                 minLength: Int,
                                          errorPlaceholder: ValidationErrorDisplayable?,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol Validatable: class, NSObjectProtocol {
+@objc public protocol Validatable: class, NSObjectProtocol {
     // a control must return its value
     func getValue() -> Any?
     
@@ -23,7 +23,7 @@ extension Validatable where Self: UIView {}
 
 
 
-@objc enum ValidatableControlState: Int {
+@objc public enum ValidatableControlState: Int {
     // The control has not been validated yet
     case normal = 0
     

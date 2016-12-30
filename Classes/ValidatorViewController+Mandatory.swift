@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ValidatorViewController {
+public extension ValidatorViewController {
     /**
      * Verifies if given value is not empty
      */
@@ -27,7 +27,7 @@ extension ValidatorViewController {
     }
     
     
-    func addMandatoryValidation<UIViewThatConformsValidatableProtocol: UIView>
+    public func addMandatoryValidation<UIViewThatConformsValidatableProtocol: UIView>
                                             (control: UIViewThatConformsValidatableProtocol?,
                                     errorPlaceholder: ValidationErrorDisplayable?,
                                         errorMessage: String = "Este campo es obligatorio")
