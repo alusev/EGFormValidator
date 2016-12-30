@@ -34,7 +34,7 @@ public struct Validator {
     /**
      * Perform validation of the control
      */
-    func validate() -> Bool {
+    public func validate() -> Bool {
         return predicate(control?.getValue(), predicateParameters)
     }
 }
