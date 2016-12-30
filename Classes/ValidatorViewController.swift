@@ -17,7 +17,7 @@ open class ValidatorViewController: UIViewController {
     /**
      * Add a new validator to validation list
      */
-    func add(validator: Validator) {
+    public func add(validator: Validator) {
         validators.append(validator)
     }
     
@@ -27,7 +27,7 @@ open class ValidatorViewController: UIViewController {
     /**
      * Validates custom text fields
      */
-    func validate() -> Bool {
+    public func validate() -> Bool {
         var formIsValid = true
         
         // a set of  invalidated controls

@@ -13,7 +13,7 @@ import UIKit
 typealias ValidatorPredicate = (Any?, [Any?]) -> Bool
 
 
-struct Validator {
+public struct Validator {
     // a control to be validated
     var control: Validatable?
     
