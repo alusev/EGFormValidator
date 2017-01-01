@@ -10,7 +10,10 @@ import UIKit
 
 public extension ValidatorViewController {
     /**
-     * Email Validator
+     Validator's predicate: verifies if given value is a valid email address
+     
+     - Parameter value: A value of the validated control
+     - Parameter params: A list of other parameters to pass to predicate. In this case empty array is expected
      */
     fileprivate func EmailValidator(value: Any?, params: [Any?]) -> Bool {
         if let email = value as? String, (email.isValidEmail() || email == "") {
@@ -22,7 +25,13 @@ public extension ValidatorViewController {
     
     
     
-    
+    /**
+     Adds email validator
+     
+     - Parameter control: A control to be validated. The control must adopt `UIViewThatConformsValidatableProtocol`
+     - Parameter errorPlaceholder: An object that will display an error message
+     - Parameter errorMessage: A message that will be displayed in the errorPlaceholder object
+     */
     public func addValidatorEmail<UIViewThatConformsValidatableProtocol: UIView>
                                             (toControl control: UIViewThatConformsValidatableProtocol?,
                                        errorPlaceholder: ValidationErrorDisplayable?,

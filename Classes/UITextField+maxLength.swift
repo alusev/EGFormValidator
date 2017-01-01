@@ -12,6 +12,7 @@ private var maxLengths = [UITextField: Int]()
 
 extension UITextField {
     
+    /// Defines a maximum characters number allow for the textfield 
     @IBInspectable public var maxLength: Int {
         get {
             guard let length = maxLengths[self] else {

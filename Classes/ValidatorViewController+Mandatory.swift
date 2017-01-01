@@ -9,8 +9,11 @@
 import UIKit
 
 public extension ValidatorViewController {
+    
     /**
-     * Verifies if given value is not empty
+     Validator's predicate: verifies if given value is not empty
+     - Parameter value: A value of the validated control
+     - Parameter params: A list of other parameters to pass to predicate. In this case empty array is expected
      */
     fileprivate func MandatoryValidator(value: Any?, params: [Any?]) -> Bool {
         // whatever type is it, if it is nil, always return FALSE
@@ -27,6 +30,14 @@ public extension ValidatorViewController {
     }
     
     
+    
+    /**
+     Adds mandatory validator
+     
+     - Parameter control: A control to be validated. The control must adopt `UIViewThatConformsValidatableProtocol`
+     - Parameter errorPlaceholder: An object that will display an error message
+     - Parameter errorMessage: A message that will be displayed in the errorPlaceholder object
+     */
     public func addValidatorMandatory<UIViewThatConformsValidatableProtocol: UIView>
                                             (toControl control: UIViewThatConformsValidatableProtocol?,
                                               errorPlaceholder: ValidationErrorDisplayable?,
