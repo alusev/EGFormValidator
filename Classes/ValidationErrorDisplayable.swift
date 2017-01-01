@@ -8,8 +8,17 @@
 
 import Foundation
 
+/**
+ If an object conforms to this protocol, it can be being able to display an a validatar's error.
+ 
+ `UILabel` adopts this protocol.
+ */
 public protocol ValidationErrorDisplayable {
     
-    // a control must be able to show error
+    /**
+     A required delegate method that is in charge to properly display an error message
+     
+     - Parameter errorMessage: an error message to be shown when a validator fails
+     */
     func setErrorMessage(errorMessage: String?)
 }

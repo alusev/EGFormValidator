@@ -14,10 +14,14 @@ import UIKit
  `UITextField` and `UITextView` adopt this protocol.
  */
 @objc public protocol Validatable: class, NSObjectProtocol {
-    // a control must return its value
+    /// A required delegate method that returns control's value
     func getValue() -> Any?
     
-    // a delegate method that gets called after validation
+    /**
+     An _optional_ delegate method that gets called after validation to set its validation state
+     
+     - Parameter state: a state of the control after validation.
+     */
     @objc optional func setValidation(state: ValidatableControlState)
 }
 
