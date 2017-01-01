@@ -19,6 +19,7 @@ A simple form validation library written in Swift 3.0.
   * Email
   * DigitsOnly
   * EqualTo (an input value equals to another inputs value)
+  * AlphaNumeric
 
 * Custom validators
 
