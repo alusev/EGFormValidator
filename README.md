@@ -17,8 +17,8 @@ A simple form validation library written in Swift 3.0.
   * Maxlength (currently only `UITextField` are supported) is a special one. Use storyboard to set it up.
   * Minlength
   * Email
-  * Digit-only
-  * Equalty (an input value equals to another inputs value)
+  * DigitsOnly
+  * EqualTo (an input value equals to another inputs value)
 
 * Custom validators
 
