@@ -6,30 +6,45 @@
 //  Copyright © 2016 Evgeny Gushchin. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-// Declares custom validation method
+
+/// Declares custom validation method
 public typealias ValidatorPredicate = (Any?, [Any?]) -> Bool
 
 
+/// `Validator`
 public struct Validator {
-    // a control to be validated
+    
+    /// A control to be validated
     var control: Validatable?
     
-    // a method that validates the control
+    
+    /// A method that validates the control
     var predicate: ValidatorPredicate
     
-    // a list of other parameters to pass to predicate
+    
+    /// A list of other parameters to pass to predicate
     var predicateParameters: [Any?]
     
-    // a placeholder that will display error
+    
+    /// A placeholder that will display error
     var errorPlaceholder: ValidationErrorDisplayable?
     
-    // an error message when the control fails validation
+    
+    /// An error message to be shown if the control fails validation
     var errorMessage: String
 
     
+    
+    /// Creates `Validator` instance
+    ///
+    /// - Parameters:
+    ///     - control: A control that will be validated
+    ///     - predicate: A function / method that will validate the control
+    ///     - predicateParameters: An array of extra parameters that will be passed to the `predicate` as a second parameter
+    ///     - errorPlaceholder: An object that will display an error message
+    ///     - errorMessage: A message that will be displayed in the `errorPlaceholder` object
     public init(control: Validatable?, predicate: @escaping ValidatorPredicate, predicateParameters: [Any?], errorPlaceholder: ValidationErrorDisplayable?, errorMessage: String) {
         self.control = control
         self.predicate = predicate
@@ -39,9 +54,8 @@ public struct Validator {
     }
     
     
-    /**
-     * Perform validation of the control
-     */
+    
+    /// Performs validation of the control
     public func validate() -> Bool {
         return predicate(control?.getValue(), predicateParameters)
     }

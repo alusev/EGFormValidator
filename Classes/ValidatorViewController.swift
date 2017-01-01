@@ -14,19 +14,28 @@ open class ValidatorViewController: UIViewController {
     private var validators = [Validator]()
     
     
-    /**
-     * Add a new validator to validation list
-     */
+    
+    /// Adds a new validator to a validation list
+    ///
+    /// - Parameters
+    ///     - validator: A validator to be added to the validation list
+    /// 
+    /// Discussion:
+    /// The order of added validators matters. The first added validators will be executed first.
+    /// If a validator of a control fails, the other validators of the control will not be executed.
+    /// It recommended to add validatots consequently respecting the order of a fields in the form.
     public func add(validator: Validator) {
         validators.append(validator)
     }
     
     
+    
+    /// Read-only property that stores the first failed in case if you need to scroll up your view and to show the invalid control
     public private(set) var firstFailedControl: UIView?
     
-    /**
-     * Validates custom text fields
-     */
+    
+    
+    /// Execute all predicates of all validators i.e. performs validation of a form
     public func validate() -> Bool {
         var formIsValid = true
         
