@@ -21,10 +21,12 @@ public extension ValidatorViewController {
     
     
     
-    public func addEmailValidation<UIViewThatConformsValidatableProtocol: UIView>
-                                            (control: UIViewThatConformsValidatableProtocol?,
-                                    errorPlaceholder: ValidationErrorDisplayable?,
-                                        errorMessage: String = "El correo electrónico es inválido")
+    
+    
+    public func addValidatorEmail<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control: UIViewThatConformsValidatableProtocol?,
+                                       errorPlaceholder: ValidationErrorDisplayable?,
+                                           errorMessage: String)
                             where UIViewThatConformsValidatableProtocol: Validatable {
         
         let aValidator = Validator(control: control,

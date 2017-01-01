@@ -67,12 +67,12 @@ public extension ValidatorViewController {
     /**
      * Validator method
      */
-    public func addValidation<UIViewThatConformsValidatableProtocol: UIView>
-                                        (control control1: UIViewThatConformsValidatableProtocol?,
-                                equalTo control2: UIViewThatConformsValidatableProtocol?,
-                                errorPlaceholder: ValidationErrorDisplayable?,
-                                    errorMessage: String = "Los campos no coinciden")
-                        where UIViewThatConformsValidatableProtocol: Validatable {
+    public func addValidatorEqualTo<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control1: UIViewThatConformsValidatableProtocol?,
+                                               errorPlaceholder: ValidationErrorDisplayable?,
+                                                   errorMessage: String,
+                                    compareWithControl control2: UIViewThatConformsValidatableProtocol?)
+                            where UIViewThatConformsValidatableProtocol: Validatable {
         
         let aValidator = Validator(control: control1,
                                    predicate: EqualtyValidator,

@@ -22,11 +22,11 @@ public extension ValidatorViewController {
     }
     
 
-    public func addDigitsOnlyValidation<UIViewThatConformsValidatableProtocol: UIView>
-                    (control: UIViewThatConformsValidatableProtocol?,
-                     errorPlaceholder: ValidationErrorDisplayable?,
-                     errorMessage: String = "Únicamente dígitos")
-                    where UIViewThatConformsValidatableProtocol: Validatable {
+    public func addValidatorDigitsOnly<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control: UIViewThatConformsValidatableProtocol?,
+                                              errorPlaceholder: ValidationErrorDisplayable?,
+                                                  errorMessage: String)
+                            where UIViewThatConformsValidatableProtocol: Validatable {
             
             let aValidator = Validator(control: control,
                                        predicate: DigitsValidator,

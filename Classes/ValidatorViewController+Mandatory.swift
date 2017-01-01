@@ -27,11 +27,11 @@ public extension ValidatorViewController {
     }
     
     
-    public func addMandatoryValidation<UIViewThatConformsValidatableProtocol: UIView>
-                                            (control: UIViewThatConformsValidatableProtocol?,
-                                    errorPlaceholder: ValidationErrorDisplayable?,
-                                        errorMessage: String = "Este campo es obligatorio")
-                                where UIViewThatConformsValidatableProtocol: Validatable {
+    public func addValidatorMandatory<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control: UIViewThatConformsValidatableProtocol?,
+                                              errorPlaceholder: ValidationErrorDisplayable?,
+                                                  errorMessage: String)
+                            where UIViewThatConformsValidatableProtocol: Validatable {
             
         let aValidator = Validator(control: control,
                                    predicate: MandatoryValidator,

@@ -26,12 +26,12 @@ extension ValidatorViewController {
     /**
      * Validator method
      */
-    public func addValidation<UIViewThatConformsValidatableProtocol: UIView>
-                                                 (control: UIViewThatConformsValidatableProtocol?,
-                                                minLength: Int,
-                                         errorPlaceholder: ValidationErrorDisplayable?,
-                                         errorMessage: String = "El campo tiene que tener mínimo %d carácteres")
-                        where UIViewThatConformsValidatableProtocol: Validatable {
+    public func addValidatorMinLength<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control: UIViewThatConformsValidatableProtocol?,
+                                              errorPlaceholder: ValidationErrorDisplayable?,
+                                                  errorMessage: String,
+                                                     minLength: Int)
+                            where UIViewThatConformsValidatableProtocol: Validatable {
             
             let aValidator = Validator(control: control,
                                        predicate: MinlengthValidator,
