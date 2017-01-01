@@ -10,11 +10,11 @@ import UIKit
 import EGFormValidator
 
 class ViewController: ValidatorViewController {
-    // Scrollview outlet
+    /// Scrollview outlet
     @IBOutlet weak var scrollView: UIScrollView?
     
     
-    // Inputs
+    /// Inputs
     @IBOutlet weak var mandatoryTextField: UITextField!
     @IBOutlet weak var minLengthTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -26,7 +26,7 @@ class ViewController: ValidatorViewController {
     
     
     
-    // Error labels
+    /// Error labels
     @IBOutlet weak var mandatoryErrorLabel: UILabel!
     @IBOutlet weak var minLengthErrorLabel: UILabel!
     @IBOutlet weak var emailErrorLabel: UILabel!
@@ -68,7 +68,7 @@ class ViewController: ValidatorViewController {
     
     
     //
-    // Add validators
+    /// Add validators
     func addValidators() {
         
         // Mandatory validator
@@ -121,7 +121,7 @@ class ViewController: ValidatorViewController {
     
     
     //
-    // Perform validation
+    /// Performs validation
     @IBAction func validateButtonTapped(_ sender: Any) {
         
         if self.validate() {

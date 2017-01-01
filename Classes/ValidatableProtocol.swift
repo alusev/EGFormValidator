@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ If an object conforms to this protocol, it can be considered as validatable object. Such objects must also be `UIView`
+ 
+ `UITextField` and `UITextView` adopt this protocol.
+ */
 @objc public protocol Validatable: class, NSObjectProtocol {
     // a control must return its value
     func getValue() -> Any?
@@ -22,14 +27,28 @@ extension Validatable where Self: UIView {}
 
 
 
-
+/**
+ A list of states of an object that conforms `Validatable` protocol:
+ 
+ **normal**
+ 
+ The control has not been validated yet. This is default state
+ 
+ **valid**
+ 
+ The control has been validated and it's valid
+ 
+ **error**
+ 
+ The control has been validated and it's not valid
+ */
 @objc public enum ValidatableControlState: Int {
-    // The control has not been validated yet
+    /// The control has not been validated yet
     case normal = 0
     
-    // The control has been validated and it's valid
+    /// The control has been validated and it's valid
     case valid
     
-    // The control has been validated and it's not valid
+    /// The control has been validated and it's not valid
     case error
 }

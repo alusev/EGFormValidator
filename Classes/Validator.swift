@@ -34,7 +34,7 @@ public struct Validator {
     
     /// An error message to be shown if the control fails validation
     var errorMessage: String
-
+    
     
     
     /// Creates `Validator` instance

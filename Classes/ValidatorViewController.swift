@@ -15,15 +15,15 @@ open class ValidatorViewController: UIViewController {
     
     
     
-    /// Adds a new validator to a validation list
-    ///
-    /// - Parameters
-    ///     - validator: A validator to be added to the validation list
-    /// 
-    /// Discussion:
-    /// The order of added validators matters. The first added validators will be executed first.
-    /// If a validator of a control fails, the other validators of the control will not be executed.
-    /// It recommended to add validatots consequently respecting the order of a fields in the form.
+    /**
+     Adds a new validator to a validation list
+     
+     - Parameter validator: A validator to be added to the validation list
+     
+     The order of added validators matters. The first added validators will be executed first.
+     If a validator of a control fails, the other validators of the control will not be executed.
+     It recommended to add validatots consequently respecting the order of a fields in the form.
+     */
     public func add(validator: Validator) {
         validators.append(validator)
     }
@@ -35,7 +35,11 @@ open class ValidatorViewController: UIViewController {
     
     
     
-    /// Execute all predicates of all validators i.e. performs validation of a form
+    /**
+     Execute all predicates of all validators i.e. performs validation of a form
+     
+     - Returns: Tells if _all validators_ are valid or not.
+     */
     public func validate() -> Bool {
         var formIsValid = true
         
@@ -52,7 +56,7 @@ open class ValidatorViewController: UIViewController {
                 
                 // validate it again only if it passed previous validation
                 if !inValidatedControls.contains(control) {
-                    // the control is not validated yet 
+                    // the control is not validated yet
                     // or it has been already validated and it passed all its previus validations
                     
                     // get validation result
