@@ -21,6 +21,7 @@ class ViewController: ValidatorViewController {
     @IBOutlet weak var digitsOnlyTextField: UITextField!
     @IBOutlet weak var equaltyTextField_1: UITextField!
     @IBOutlet weak var equaltyTextField_2: UITextField!
+    @IBOutlet weak var alphaNumericTextField: UITextField!
     
     // Error labels
     @IBOutlet weak var mandatoryErrorLabel: UILabel!
@@ -28,6 +29,7 @@ class ViewController: ValidatorViewController {
     @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var digitsOnlyErrorLabel: UILabel!
     @IBOutlet weak var equaltyErrorLabel: UILabel!
+    @IBOutlet weak var aphaNumericErrorLabel: UILabel!
     
     
     
@@ -66,39 +68,41 @@ class ViewController: ValidatorViewController {
     // Add validators
     func addValidators() {
         
-        // Add mandatory validator
-        self.addMandatoryValidation(control: self.mandatoryTextField,
-                           errorPlaceholder: self.mandatoryErrorLabel,
-                               errorMessage: "This field is required")
+        // Mandatory validator
+        self.addValidatorMandatory(toControl: self.mandatoryTextField,
+                            errorPlaceholder: self.mandatoryErrorLabel,
+                                errorMessage: "This field is required")
         
         
-        
-        // Add minlength validator
-        self.addValidation(control: self.minLengthTextField,
-                         minLength: 8,
-                  errorPlaceholder: self.minLengthErrorLabel,
-                      errorMessage: "Enter at least %d characters")
-        
-        
+        // Minlength validator
+        self.addValidatorMinLength(toControl: self.minLengthTextField,
+                            errorPlaceholder: self.minLengthErrorLabel,
+                                errorMessage: "Enter at least %d characters",
+                                   minLength: 8)
         
         // Email validator
-        self.addEmailValidation(control: self.emailTextField,
-                       errorPlaceholder: self.emailErrorLabel,
-                           errorMessage: "Email is invalid")
+        self.addValidatorEmail(toControl: self.emailTextField,
+                        errorPlaceholder: self.emailErrorLabel,
+                            errorMessage: "Email is invalid")
         
         
-        // Add digits only validator
-        self.addDigitsOnlyValidation(control: self.digitsOnlyTextField,
-                            errorPlaceholder: self.digitsOnlyErrorLabel,
-                                errorMessage: "Some of the characters are not digits")
-        
+        // Digits only validator
+        self.addValidatorDigitsOnly(toControl: self.digitsOnlyTextField,
+                             errorPlaceholder: self.digitsOnlyErrorLabel,
+                                 errorMessage: "Some of the characters are not digits")
         
         
         // Equalty validator
-        self.addValidation(control: self.equaltyTextField_1,
-                           equalTo: self.equaltyTextField_2,
-                           errorPlaceholder: self.equaltyErrorLabel,
-                           errorMessage: "The strings don't match")
+        self.addValidatorEqualTo(toControl: self.equaltyTextField_1,
+                          errorPlaceholder: self.equaltyErrorLabel,
+                              errorMessage: "The strings don't match",
+                        compareWithControl: self.equaltyTextField_2)
+        
+        
+        // Alphanumeric validator
+        self.addValidatorAlphaNumeric(toControl: self.alphaNumericTextField,
+                               errorPlaceholder: self.aphaNumericErrorLabel,
+                                   errorMessage: "Only letters and digits are allowed")
     }
     
     
