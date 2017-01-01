@@ -98,33 +98,39 @@ class MyViewController: ValidatorViewController {
         // Place your validation code here   
         //
         // Mandatory validation
-        self.addMandatoryValidation(control: self.fullnameTextfield, 
-                           errorPlaceholder: self.fullnameErrorLabel,
-                               errorMessage: "The field is required")
+        self.addValidatorMandatory(toControl: self.fullnameTextfield,
+                            errorPlaceholder: self.fullnameErrorLabel,
+                                errorMessage: "This field is required")
+                                
         
         // Minlength
-        self.addValidation(control: self.fullnameTextfield, 
-                         minLength: 5, 
-                  errorPlaceholder: self.fullnameErrorLabel, 
-                      errorMessage: "Please enter at least %d characters")
+        self.addValidatorMinLength(toControl: self.fullnameTextfield,
+                            errorPlaceholder: self.fullnameErrorLabel,
+                                errorMessage: "Enter at least %d characters",
+                                   minLength: 8)
         
      
         // Email
-        self.addEmailValidation(control: self.emailTextfield,
-                       errorPlaceholder: self.emailErrorLabel,
-                           errorMessage: "Email is invalid.")
+        self.addValidatorEmail(toControl: self.emailTextField,
+                        errorPlaceholder: self.emailErrorLabel,
+                            errorMessage: "Email is invalid")
 
-        // Digits only
-        self.addDigitsOnlyValidation(control: self.postalCodeTextfield, 
-                            errorPlaceholder: self.postalCodeErrorLabel,
-                                errorMessage: "Postal code must contain only digits")
+        // Digits Only
+        self.addValidatorDigitsOnly(toControl: self.postalCodeTextfield,
+                             errorPlaceholder: self.postalCodeErrorLabel,
+                                 errorMessage: "Postal code must contain only digits")
+                                 
         
         // Equalty
-        self.addValidation(control: self.passwordConfirmationTextField,
-                           equalTo: self.passwordTextField,
-                           errorPlaceholder: self.passwordConfirmationErrorLabel,
-                           errorMessage: "Passwords don't match")
+        self.addValidatorEqualTo(toControl: self.passwordConfirmationTextField,
+                          errorPlaceholder: self.passwordConfirmationErrorLabel,
+                              errorMessage: "Passwords don't match",
+                        compareWithControl: self.passwordTextField)
 
+        // AlphaNumeric
+        self.addValidatorAlphaNumeric(toControl: self.alphaNumericTextField,
+                               errorPlaceholder: self.aphaNumericErrorLabel,
+                                   errorMessage: "Only letters and digits are allowed")
     }
 ```
  _3. Execute `self.validate()` to validate your form_
