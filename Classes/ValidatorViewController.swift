@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+/// Adds to `UIViewController` validation functionality
 open class ValidatorViewController: UIViewController {
     // MARK - VALIDATION
     private var validators = [Validator]()

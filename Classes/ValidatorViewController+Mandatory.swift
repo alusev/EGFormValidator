@@ -8,12 +8,14 @@
 
 import UIKit
 
+/// The extension adds Mandatory validator
 public extension ValidatorViewController {
     
     /**
      Validator's predicate: verifies if given value is not empty
      - Parameter value: A value of the validated control
      - Parameter params: A list of other parameters to pass to predicate. In this case empty array is expected
+     - Returns: `True` if the value is not empty
      */
     fileprivate func MandatoryValidator(value: Any?, params: [Any?]) -> Bool {
         // whatever type is it, if it is nil, always return FALSE

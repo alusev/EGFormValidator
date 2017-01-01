@@ -14,7 +14,10 @@ import UIKit
  `UITextField` and `UITextView` adopt this protocol.
  */
 @objc public protocol Validatable: class, NSObjectProtocol {
-    /// A required delegate method that returns control's value
+    /**
+     A required delegate method that returns control's value
+     - Returns: A control's value
+     */
     func getValue() -> Any?
     
     /**
@@ -26,7 +29,7 @@ import UIKit
 }
 
 
-
+/// Only `UIView`s can adopt `Validatable` protocol
 extension Validatable where Self: UIView {}
 
 

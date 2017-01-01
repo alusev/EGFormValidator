@@ -8,8 +8,10 @@
 
 import UIKit
 
+/// The variable holds an array of maxlength values of all `UITextFields`
 private var maxLengths = [UITextField: Int]()
 
+/// The extension adds MaxLength validator
 extension UITextField {
     
     /// Defines a maximum characters number allow for the textfield 
@@ -30,7 +32,10 @@ extension UITextField {
         }
     }
     
-    
+    /**
+     The method to be called on `UIControlEvents.editingChanged` event
+     - Parameter textField: A textfield beeing edited
+     */
     func limitLength(textField: UITextField) {
         guard let prospectiveText = textField.text, prospectiveText.characters.count > maxLength else {
             return

@@ -8,9 +8,13 @@
 
 import UIKit
 
+/// The extension that makes all `UITextField` be able to be validated
 extension UITextView: Validatable {
     
-    // MARK - Validatable Protocol Implementation
+    /**
+     MARK: - Validatable Protocol Implementation
+     - Returns: A control's value
+     */
     public func getValue() -> Any? {
         return self.text
     }

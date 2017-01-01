@@ -8,12 +8,14 @@
 
 import UIKit
 
+/// The extension adds EqualTo validator
 public extension ValidatorViewController {
     /**
      Validator's predicate: verifies if given value is equal to another control's value
      
      - Parameter value1: A value of the validated control
      - Parameter params: A list of other parameters to pass to predicate. In this case it's expected an array with one element that conforms to `UIViewThatConformsValidatableProtocol` protocol
+     - Returns: `True` if the value is equal to another control's value
      */
     fileprivate func EqualtyValidator(value1: Any?, params: [Any?]) -> Bool {
         guard
@@ -63,6 +65,7 @@ public extension ValidatorViewController {
      – Parameter type: An expected type of values **a** and **b**
      - Parameter a: A value to be compared with **b**
      - Parameter b: A value to be compared with **a**
+     - Returns: `True` if the values are aqual
      */
     fileprivate func isEqual<T: Equatable>(type: T.Type, a: Any, b: Any) -> Bool? {
         guard let a = a as? T, let b = b as? T else { return nil }

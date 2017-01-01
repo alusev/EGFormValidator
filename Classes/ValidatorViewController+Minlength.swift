@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// The extension adds Minlength validator
 extension ValidatorViewController {
     
     /**
@@ -15,6 +16,7 @@ extension ValidatorViewController {
      
      - Parameter value: A value of the validated control
      - Parameter params: A list of other parameters to pass to predicate. In this case empty array is expected
+     - Returns: `True` if the value has at least `value` characters
      */
     private func MinlengthValidator(value: Any?, params: [Any?]) -> Bool {
         let minLength = params[0] as! Int

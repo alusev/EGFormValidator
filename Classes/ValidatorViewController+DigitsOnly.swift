@@ -1,5 +1,5 @@
 //
-//  ValidatorViewController+Digits.swift
+//  ValidatorViewController+DigitsOnly.swift
 //  EGFormValidator
 //
 //  Created by Evgeny Gushchin on 19/12/16.
@@ -8,12 +8,14 @@
 
 import UIKit
 
+/// The extension adds DigitsOnly validator
 public extension ValidatorViewController {
     /**
      Validator's predicate: verifies if given value contains only digits
      
      - Parameter value: A value of the validated control
      - Parameter params: A list of other parameters to pass to predicate. In this case empty array is expected
+     - Returns: `True` if the value contains only digits
      */
     fileprivate func DigitsValidator(value: Any?, params: [Any?]) -> Bool {
         let badCharacters = NSCharacterSet.decimalDigits.inverted

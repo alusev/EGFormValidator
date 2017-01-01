@@ -8,12 +8,14 @@
 
 import UIKit
 
+/// The extension adds Email validator
 public extension ValidatorViewController {
     /**
      Validator's predicate: verifies if given value is a valid email address
      
      - Parameter value: A value of the validated control
      - Parameter params: A list of other parameters to pass to predicate. In this case empty array is expected
+     - Returns: `True` if the value is a valid email address
      */
     fileprivate func EmailValidator(value: Any?, params: [Any?]) -> Bool {
         if let email = value as? String, (email.isValidEmail() || email == "") {
