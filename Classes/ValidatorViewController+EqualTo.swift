@@ -1,5 +1,5 @@
 //
-//  ValidatorViewController+Equal.swift
+//  ValidatorViewController+EqualTo.swift
 //  EGFormValidator
 //
 //  Created by Evgeny Gushchin on 09/12/16.
