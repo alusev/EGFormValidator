@@ -14,6 +14,7 @@
 		57DE77D41E16B48A00D5EE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DE77D21E16B48A00D5EE81 /* LaunchScreen.storyboard */; };
 		57DE77DF1E16B48A00D5EE81 /* EGFormValidatorExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77DE1E16B48A00D5EE81 /* EGFormValidatorExampleTests.swift */; };
 		57DE77EA1E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77E91E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift */; };
+		57DE78221E199E6700D5EE81 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78211E199E6700D5EE81 /* CustomTextfield.swift */; };
 		E6290F04C0A15F5C4D0B1B1E /* Pods_EGFormValidatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410C2981A7C0CE6CB89B388E /* Pods_EGFormValidatorExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		57DE77E51E16B48A00D5EE81 /* EGFormValidatorExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFormValidatorExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE77E91E16B48A00D5EE81 /* EGFormValidatorExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFormValidatorExampleUITests.swift; sourceTree = "<group>"; };
 		57DE77EB1E16B48A00D5EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DE78211E199E6700D5EE81 /* CustomTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				57DE77D01E16B48A00D5EE81 /* Assets.xcassets */,
 				57DE77D21E16B48A00D5EE81 /* LaunchScreen.storyboard */,
 				57DE77D51E16B48A00D5EE81 /* Info.plist */,
+				57DE78211E199E6700D5EE81 /* CustomTextfield.swift */,
 			);
 			path = EGFormValidatorExample;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				57DE77CC1E16B48A00D5EE81 /* ViewController.swift in Sources */,
 				57DE77CA1E16B48A00D5EE81 /* AppDelegate.swift in Sources */,
+				57DE78221E199E6700D5EE81 /* CustomTextfield.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +586,7 @@
 				57DE77F01E16B48A00D5EE81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57DE77F11E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +595,7 @@
 				57DE77F31E16B48A00D5EE81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57DE77F41E16B48A00D5EE81 /* Build configuration list for PBXNativeTarget "EGFormValidatorExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +604,7 @@
 				57DE77F61E16B48A00D5EE81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

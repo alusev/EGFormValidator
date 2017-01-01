@@ -22,6 +22,9 @@ class ViewController: ValidatorViewController {
     @IBOutlet weak var equaltyTextField_1: UITextField!
     @IBOutlet weak var equaltyTextField_2: UITextField!
     @IBOutlet weak var alphaNumericTextField: UITextField!
+    @IBOutlet weak var customStyledTextField: UITextField!
+    
+    
     
     // Error labels
     @IBOutlet weak var mandatoryErrorLabel: UILabel!
@@ -103,6 +106,14 @@ class ViewController: ValidatorViewController {
         self.addValidatorAlphaNumeric(toControl: self.alphaNumericTextField,
                                errorPlaceholder: self.aphaNumericErrorLabel,
                                    errorMessage: "Only letters and digits are allowed")
+        
+        
+        
+        // Custom styled textfield
+        // In this case it doesn't matter which validator we use.
+        self.addValidatorMandatory(toControl: self.customStyledTextField,
+                            errorPlaceholder: nil, // This time we are not going to show an error message
+                                errorMessage: "")
     }
     
     
