@@ -53,4 +53,35 @@ class ValidatorMandatoryTests: XCTestCase {
         vc.addValidatorMandatory(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR")
         XCTAssert(vc.validate(), "Field is not empty")
     }
+    
+    
+    func testValidator4() {
+        let customControl = CustomControl()
+        vc.addValidatorMandatory(toControl: customControl, errorPlaceholder: placeholder, errorMessage: "ERROR")
+        XCTAssertFalse(vc.validate(), "Field is empty")
+        
+        customControl.value = 0
+        vc.addValidatorMandatory(toControl: customControl, errorPlaceholder: placeholder, errorMessage: "ERROR")
+        XCTAssert(vc.validate(), "Field is not empty")
+     
+        
+        customControl.value = -10
+        vc.addValidatorMandatory(toControl: customControl, errorPlaceholder: placeholder, errorMessage: "ERROR")
+        XCTAssert(vc.validate(), "Field is not empty")
+        
+        
+        customControl.value = 10
+        vc.addValidatorMandatory(toControl: customControl, errorPlaceholder: placeholder, errorMessage: "ERROR")
+        XCTAssert(vc.validate(), "Field is not empty")
+    }
+    
+}
+
+
+class CustomControl: UIView, Validatable {
+    var value: Int?
+    
+    func getValue() -> Any? {
+        return value
+    }
 }
