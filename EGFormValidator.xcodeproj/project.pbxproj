@@ -34,6 +34,7 @@
 		57DE78371E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78361E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift */; };
 		57DE78391E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78381E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift */; };
 		57DE783B1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE783A1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift */; };
+		57DE783F1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE783E1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		57DE78361E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorMandatoryTests.swift; sourceTree = "<group>"; };
 		57DE78381E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorMinlengthTests.swift; sourceTree = "<group>"; };
 		57DE783A1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorMaxlengthTests.swift; sourceTree = "<group>"; };
+		57DE783E1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorEqualToTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				57DE78361E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift */,
 				57DE78381E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift */,
 				57DE783A1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift */,
+				57DE783E1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift */,
 			);
 			path = EGFormValidatorTests;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				57DE782D1E1AC62900D5EE81 /* UITextFieldTests.swift in Sources */,
 				57DE78391E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift in Sources */,
 				57DE78291E1AAE3000D5EE81 /* ValidatorVCTests.swift in Sources */,
+				57DE783F1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
