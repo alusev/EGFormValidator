@@ -33,6 +33,7 @@
 		57DE78351E1AD26200D5EE81 /* ValidatorEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78341E1AD26200D5EE81 /* ValidatorEmailTests.swift */; };
 		57DE78371E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78361E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift */; };
 		57DE78391E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78381E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift */; };
+		57DE783B1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE783A1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		57DE78341E1AD26200D5EE81 /* ValidatorEmailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorEmailTests.swift; sourceTree = "<group>"; };
 		57DE78361E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorMandatoryTests.swift; sourceTree = "<group>"; };
 		57DE78381E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorMinlengthTests.swift; sourceTree = "<group>"; };
+		57DE783A1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorMaxlengthTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				57DE78341E1AD26200D5EE81 /* ValidatorEmailTests.swift */,
 				57DE78361E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift */,
 				57DE78381E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift */,
+				57DE783A1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift */,
 			);
 			path = EGFormValidatorTests;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DE78371E1ADBE800D5EE81 /* ValidatorMandatoryTests.swift in Sources */,
+				57DE783B1E1ADE1500D5EE81 /* ValidatorMaxlengthTests.swift in Sources */,
 				57DE782B1E1ABA9000D5EE81 /* UILabelTests.swift in Sources */,
 				57DE78311E1AC9D600D5EE81 /* ValidatorTests.swift in Sources */,
 				57DE78331E1AD0DA00D5EE81 /* EmailTests.swift in Sources */,
