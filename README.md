@@ -45,7 +45,7 @@ The recommended approach to use _EGFormValidator_ in your project is using the [
 
 Install CocoaPods if not already available:
 
-``` bash
+```bash
 $ [sudo] gem install cocoapods
 $ pod setup
 ```
