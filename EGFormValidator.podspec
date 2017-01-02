@@ -1,17 +1,18 @@
 Pod::Spec.new do |s|
   s.name             = 'EGFormValidator'
-  s.version          = '0.4.1'
+  s.version          = '1.0.0'
   s.summary          = 'A simple form validation library written in Swift 3.0.'
   s.description      = <<-DESC
 The EGFormValidator framework allows you to validate any input field in a convenient way and to display error absolutely anywhere you want.
 
 Availables built-in form validators:
 * Mandatory
-* Digits
+* Digits Only
 * Minlength
 * Maxlength
-* Equalty
+* EqualTo
 * Email
+* AlphaNumeric
 
 It is also extendable, so you can easily create your own input validator.
 
