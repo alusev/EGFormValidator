@@ -45,10 +45,18 @@ class ValidatorEqualToTests: XCTestCase {
         textField1.text = "1234"
         textField2.text = "1234"
         XCTAssert(vc.validate(), "Fields are equal")
-        
+
         textField1.text = ""
         textField2.text = nil
         XCTAssert(vc.validate(), "Fields are equal")
+        
+        textField1.text = "yy"
+        textField2.text = nil
+        XCTAssertFalse(vc.validate(), "Fields are not equal")
+        
+        textField1.text = nil
+        textField2.text = "xx"
+        XCTAssertFalse(vc.validate(), "Fields are not equal")
         
         textField1.text = "1234"
         textField2.text = "12345"
@@ -113,9 +121,9 @@ class ValidatorEqualToTests: XCTestCase {
         customControl2.value = "A"
         XCTAssertFalse(vc.validate(), "Fields are not equal")
     }
+
+
 }
-
-
 
 class CustomControlFloat: UIView, Validatable {
     var value: Float?
