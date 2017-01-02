@@ -40,8 +40,12 @@ class ValidatorMaxlengthTests: XCTestCase {
         
         textField.maxLength = 5
         textField.text = "qwerty"
-        XCTAssertEqual(textField.text?.characters.count, 5)
+        XCTAssertEqual(textField.text?.characters.count, 6)
         
-        XCTAssertEqual(textField.maxLength, 5)
+        // test getter
+        textField.maxLength = 15
+        XCTAssertEqual(textField.maxLength, 15)
     }
+    
+    // TODO: add UI tests
 }
