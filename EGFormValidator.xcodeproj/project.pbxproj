@@ -26,6 +26,7 @@
 		57DE78201E1982A000D5EE81 /* ValidatorViewController+AlphaNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE781F1E1982A000D5EE81 /* ValidatorViewController+AlphaNumeric.swift */; };
 		57DE78291E1AAE3000D5EE81 /* ValidatorVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78281E1AAE3000D5EE81 /* ValidatorVCTests.swift */; };
 		57DE782B1E1ABA9000D5EE81 /* UILabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE782A1E1ABA9000D5EE81 /* UILabelTests.swift */; };
+		57DE782D1E1AC62900D5EE81 /* UITextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE782C1E1AC62900D5EE81 /* UITextFieldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		57DE78271E1AAE2F00D5EE81 /* EGFormValidatorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGFormValidatorTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		57DE78281E1AAE3000D5EE81 /* ValidatorVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorVCTests.swift; sourceTree = "<group>"; };
 		57DE782A1E1ABA9000D5EE81 /* UILabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTests.swift; sourceTree = "<group>"; };
+		57DE782C1E1AC62900D5EE81 /* UITextFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				57DE78271E1AAE2F00D5EE81 /* EGFormValidatorTests-Bridging-Header.h */,
 				57DE78281E1AAE3000D5EE81 /* ValidatorVCTests.swift */,
 				57DE782A1E1ABA9000D5EE81 /* UILabelTests.swift */,
+				57DE782C1E1AC62900D5EE81 /* UITextFieldTests.swift */,
 			);
 			path = EGFormValidatorTests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DE782B1E1ABA9000D5EE81 /* UILabelTests.swift in Sources */,
+				57DE782D1E1AC62900D5EE81 /* UITextFieldTests.swift in Sources */,
 				57DE78291E1AAE3000D5EE81 /* ValidatorVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
