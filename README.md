@@ -10,6 +10,19 @@ A simple form validation library written in Swift 3.0.
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-blue.svg
 [swift-url]: https://swift.org
 
+
+1. [Features](#features)
+2. [Demo](#demo)
+3. [Requirements](#requirements)
+4. [Installation](#installation)
+5. [Usage](#usage)
+   - [Basic](#basic)
+   - [Highlight valid and invalid inputs](#add-styles-highlight-valid-and-invalid-inputs)
+   - [Custom validators](#custom-validators)
+   - [Custom input fields](#custom-input-fields)
+   - [Custom error placeholders](#custom-error-placeholders)
+
+
 ## Features
 
 * Built-in validators
