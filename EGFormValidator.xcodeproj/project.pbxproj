@@ -30,6 +30,7 @@
 		57DE782F1E1AC79100D5EE81 /* UITextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE782E1E1AC79100D5EE81 /* UITextViewTests.swift */; };
 		57DE78311E1AC9D600D5EE81 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78301E1AC9D600D5EE81 /* ValidatorTests.swift */; };
 		57DE78331E1AD0DA00D5EE81 /* EmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78321E1AD0DA00D5EE81 /* EmailTests.swift */; };
+		57DE78351E1AD26200D5EE81 /* ValidatorEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78341E1AD26200D5EE81 /* ValidatorEmailTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		57DE782E1E1AC79100D5EE81 /* UITextViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewTests.swift; sourceTree = "<group>"; };
 		57DE78301E1AC9D600D5EE81 /* ValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		57DE78321E1AD0DA00D5EE81 /* EmailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTests.swift; sourceTree = "<group>"; };
+		57DE78341E1AD26200D5EE81 /* ValidatorEmailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorEmailTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				57DE782E1E1AC79100D5EE81 /* UITextViewTests.swift */,
 				57DE78301E1AC9D600D5EE81 /* ValidatorTests.swift */,
 				57DE78321E1AD0DA00D5EE81 /* EmailTests.swift */,
+				57DE78341E1AD26200D5EE81 /* ValidatorEmailTests.swift */,
 			);
 			path = EGFormValidatorTests;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				57DE782B1E1ABA9000D5EE81 /* UILabelTests.swift in Sources */,
 				57DE78311E1AC9D600D5EE81 /* ValidatorTests.swift in Sources */,
 				57DE78331E1AD0DA00D5EE81 /* EmailTests.swift in Sources */,
+				57DE78351E1AD26200D5EE81 /* ValidatorEmailTests.swift in Sources */,
 				57DE782F1E1AC79100D5EE81 /* UITextViewTests.swift in Sources */,
 				57DE782D1E1AC62900D5EE81 /* UITextFieldTests.swift in Sources */,
 				57DE78291E1AAE3000D5EE81 /* ValidatorVCTests.swift in Sources */,

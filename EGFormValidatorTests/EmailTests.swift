@@ -26,6 +26,7 @@ class EmailTests: XCTestCase {
         XCTAssert("abc@gmail.com.mx".isValidEmail())
         XCTAssert("1abc@gmail.com.mx".isValidEmail())
         XCTAssert("1ab.c@gmail.com.mx".isValidEmail())
+        XCTAssert("1ab.c@gmail.co.mx".isValidEmail())
         XCTAssert("a@gmail.com.mx".isValidEmail())
         XCTAssert("a@ab.cd".isValidEmail())
         XCTAssertFalse("abc@localhost".isValidEmail())
@@ -34,6 +35,9 @@ class EmailTests: XCTestCase {
         XCTAssert("a-b@gma-i1234l.com.mx".isValidEmail())
         XCTAssert("a-b@123gma-i1234l.com.mx".isValidEmail())
         XCTAssertFalse("".isValidEmail())
+        XCTAssertFalse("aa@bb.".isValidEmail())
+        XCTAssertFalse("aa@bb.com.".isValidEmail())
+        XCTAssertFalse("a,a@bb.com".isValidEmail())
     }
     
 }
