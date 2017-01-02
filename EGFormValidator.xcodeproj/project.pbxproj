@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		57DE77461E16372400D5EE81 /* EGFormValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DE773C1E16372400D5EE81 /* EGFormValidator.framework */; };
-		57DE774B1E16372400D5EE81 /* EGFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE774A1E16372400D5EE81 /* EGFormValidatorTests.swift */; };
 		57DE77681E1637A400D5EE81 /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77581E1637A400D5EE81 /* String+Email.swift */; };
 		57DE77691E1637A400D5EE81 /* UILabel+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77591E1637A400D5EE81 /* UILabel+Error.swift */; };
 		57DE776A1E1637A400D5EE81 /* UITextField+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE775A1E1637A400D5EE81 /* UITextField+Error.swift */; };
@@ -25,6 +24,7 @@
 		57DE77751E1637A400D5EE81 /* ValidatorViewController+Minlength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77651E1637A400D5EE81 /* ValidatorViewController+Minlength.swift */; };
 		57DE77821E163C9200D5EE81 /* EGFormValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 57DE77561E1637A400D5EE81 /* EGFormValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57DE78201E1982A000D5EE81 /* ValidatorViewController+AlphaNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE781F1E1982A000D5EE81 /* ValidatorViewController+AlphaNumeric.swift */; };
+		57DE78291E1AAE3000D5EE81 /* ValidatorVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78281E1AAE3000D5EE81 /* ValidatorVCTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 /* Begin PBXFileReference section */
 		57DE773C1E16372400D5EE81 /* EGFormValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EGFormValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE77451E16372400D5EE81 /* EGFormValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFormValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		57DE774A1E16372400D5EE81 /* EGFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGFormValidatorTests.swift; sourceTree = "<group>"; };
 		57DE774C1E16372400D5EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57DE77561E1637A400D5EE81 /* EGFormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGFormValidator.h; path = Classes/EGFormValidator.h; sourceTree = "<group>"; };
 		57DE77581E1637A400D5EE81 /* String+Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Email.swift"; path = "Classes/String+Email.swift"; sourceTree = "<group>"; };
@@ -59,6 +58,8 @@
 		57DE77651E1637A400D5EE81 /* ValidatorViewController+Minlength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+Minlength.swift"; path = "Classes/ValidatorViewController+Minlength.swift"; sourceTree = "<group>"; };
 		57DE777F1E16394000D5EE81 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/latenal/Developer/EGFormValidator/Classes/Info.plist; sourceTree = "<absolute>"; };
 		57DE781F1E1982A000D5EE81 /* ValidatorViewController+AlphaNumeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+AlphaNumeric.swift"; path = "Classes/ValidatorViewController+AlphaNumeric.swift"; sourceTree = "<group>"; };
+		57DE78271E1AAE2F00D5EE81 /* EGFormValidatorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGFormValidatorTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		57DE78281E1AAE3000D5EE81 /* ValidatorVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorVCTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +102,9 @@
 		57DE77491E16372400D5EE81 /* EGFormValidatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				57DE774A1E16372400D5EE81 /* EGFormValidatorTests.swift */,
 				57DE774C1E16372400D5EE81 /* Info.plist */,
+				57DE78271E1AAE2F00D5EE81 /* EGFormValidatorTests-Bridging-Header.h */,
+				57DE78281E1AAE3000D5EE81 /* ValidatorVCTests.swift */,
 			);
 			path = EGFormValidatorTests;
 			sourceTree = "<group>";
@@ -278,6 +280,7 @@
 					};
 					57DE77441E16372400D5EE81 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -344,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57DE774B1E16372400D5EE81 /* EGFormValidatorTests.swift in Sources */,
+				57DE78291E1AAE3000D5EE81 /* ValidatorVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,10 +506,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EGFormValidatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EGFormValidatorTests/EGFormValidatorTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -515,10 +521,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EGFormValidatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.appner.EGFormValidatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EGFormValidatorTests/EGFormValidatorTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
