@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578650CE1E22DEF100797E79 /* ValidatorViewController+Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578650CD1E22DEF100797E79 /* ValidatorViewController+Regexp.swift */; };
 		57DE77461E16372400D5EE81 /* EGFormValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DE773C1E16372400D5EE81 /* EGFormValidator.framework */; };
 		57DE77681E1637A400D5EE81 /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77581E1637A400D5EE81 /* String+Email.swift */; };
 		57DE77691E1637A400D5EE81 /* UILabel+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77591E1637A400D5EE81 /* UILabel+Error.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		578650CD1E22DEF100797E79 /* ValidatorViewController+Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+Regexp.swift"; path = "Classes/ValidatorViewController+Regexp.swift"; sourceTree = "<group>"; };
 		57DE773C1E16372400D5EE81 /* EGFormValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EGFormValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE77451E16372400D5EE81 /* EGFormValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFormValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE774C1E16372400D5EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		578650CF1E22DEF800797E79 /* Regexp */ = {
+			isa = PBXGroup;
+			children = (
+				578650CD1E22DEF100797E79 /* ValidatorViewController+Regexp.swift */,
+			);
+			name = Regexp;
+			sourceTree = "<group>";
+		};
 		57DE77321E16372400D5EE81 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 				57DE777E1E1638F700D5EE81 /* DigitsOnly */,
 				57DE777D1E1638ED00D5EE81 /* EqualTo */,
 				57DE781E1E18965500D5EE81 /* AlphaNumeric */,
+				578650CF1E22DEF800797E79 /* Regexp */,
 			);
 			name = "Core Validators";
 			sourceTree = "<group>";
@@ -371,6 +382,7 @@
 				57DE776E1E1637A400D5EE81 /* ValidationErrorDisplayable.swift in Sources */,
 				57DE776A1E1637A400D5EE81 /* UITextField+Error.swift in Sources */,
 				57DE77691E1637A400D5EE81 /* UILabel+Error.swift in Sources */,
+				578650CE1E22DEF100797E79 /* ValidatorViewController+Regexp.swift in Sources */,
 				57DE77721E1637A400D5EE81 /* ValidatorViewController+Email.swift in Sources */,
 				57DE77731E1637A400D5EE81 /* ValidatorViewController+EqualTo.swift in Sources */,
 				57DE78201E1982A000D5EE81 /* ValidatorViewController+AlphaNumeric.swift in Sources */,
