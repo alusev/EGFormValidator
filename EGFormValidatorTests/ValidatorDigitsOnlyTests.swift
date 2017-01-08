@@ -55,4 +55,22 @@ class ValidatorDigitsOnlyTests: XCTestCase {
         XCTAssertFalse(vc.validate(), "Field has non-digits")
     }
     
+    
+    func testCondition0() {
+        textField.text = "abc"
+        vc.addValidatorDigitsOnly(toControl: textField, errorPlaceholder: placeholder, errorMessage: "Error") { () -> Bool in
+            return false
+        }
+        XCTAssert(vc.validate(), "Condition implies that the field is not required to contain only digits")
+    }
+    
+    
+    func testCondition1() {
+        textField.text = "abc"
+        vc.addValidatorDigitsOnly(toControl: textField, errorPlaceholder: placeholder, errorMessage: "Error") { () -> Bool in
+            return true
+        }
+        XCTAssertFalse(vc.validate(), "Condition implies that the field must contain only digits")
+    }
+    
 }

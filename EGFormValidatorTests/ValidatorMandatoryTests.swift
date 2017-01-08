@@ -75,6 +75,26 @@ class ValidatorMandatoryTests: XCTestCase {
         XCTAssert(vc.validate(), "Field is not empty")
     }
     
+    
+    
+    
+    func testCondition0() {
+        textField.text = ""
+        vc.addValidatorMandatory(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR") { () -> Bool in
+            return false
+        }
+        XCTAssert(vc.validate(), "Condition implies that the field is not mandatory")
+
+    }
+    
+    
+    func testCondition1() {
+        textField.text = ""
+        vc.addValidatorMandatory(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR") { () -> Bool in
+            return true
+        }
+        XCTAssertFalse(vc.validate(), "Condition implies that the field is mandatory")
+    }
 }
 
 

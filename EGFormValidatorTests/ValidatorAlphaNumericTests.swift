@@ -57,6 +57,23 @@ class ValidatorAlphaNumericTests: XCTestCase {
         
         textField.text = "-3"
         XCTAssertFalse(vc.validate(), "Field has non-alphanumeric characters")
-        
+    }
+    
+    
+    func testCondition0() {
+        textField.text = "123abc!"
+        vc.addValidatorAlphaNumeric(toControl: textField, errorPlaceholder: placeholder, errorMessage: "Error") { () -> Bool in
+            return false
+        }
+        XCTAssert(vc.validate(), "Condition implies that the field is not required to contain only digits and letters")
+    }
+    
+    
+    func testCondition1() {
+        textField.text = "123abc!"
+        vc.addValidatorAlphaNumeric(toControl: textField, errorPlaceholder: placeholder, errorMessage: "Error") { () -> Bool in
+            return true
+        }
+        XCTAssertFalse(vc.validate(), "Condition implies that the field must contain only digits and letters")
     }
 }

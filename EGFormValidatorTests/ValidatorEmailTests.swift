@@ -52,4 +52,22 @@ class ValidatorEmailTests: XCTestCase {
         vc.addValidatorEmail(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR")
         XCTAssert(vc.validate(), "Email is valid")
     }
+    
+    
+    func testCondition0() {
+        textField.text = "xxx"
+        vc.addValidatorEmail(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR") { () -> Bool in
+            return false
+        }
+        XCTAssert(vc.validate(), "Condition implies that the field is not required to be a valid email")
+    }
+    
+    
+    func testCondition1() {
+        textField.text = "12"
+        vc.addValidatorEmail(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR") { () -> Bool in
+            return true
+        }
+        XCTAssertFalse(vc.validate(), "Condition implies that the field must be an email")
+    }
 }

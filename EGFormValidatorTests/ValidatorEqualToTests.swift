@@ -122,6 +122,28 @@ class ValidatorEqualToTests: XCTestCase {
         XCTAssertFalse(vc.validate(), "Fields are not equal")
     }
 
+    
+    
+    func testCondition0() {
+        textField1.text = "12345"
+        textField2.text = "1234"
+        
+        vc.addValidatorEqualTo(toControl: textField1, errorPlaceholder: placeholder, errorMessage: "ERROR", compareWithControl: textField2) { () -> Bool in
+            return false
+        }
+        XCTAssert(vc.validate(), "Condition implies that the field is not required to be equal")
+    }
+    
+    
+    func testCondition1() {
+        textField1.text = "12345"
+        textField2.text = "1234"
+        
+        vc.addValidatorEqualTo(toControl: textField1, errorPlaceholder: placeholder, errorMessage: "ERROR", compareWithControl: textField2) { () -> Bool in
+            return true
+        }
+        XCTAssertFalse(vc.validate(), "Condition implies that the field must be equal")
+    }
 
 }
 
