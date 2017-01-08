@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		578650CE1E22DEF100797E79 /* ValidatorViewController+Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578650CD1E22DEF100797E79 /* ValidatorViewController+Regexp.swift */; };
+		578650D11E22DFBF00797E79 /* ValidatorRegexpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578650D01E22DFBF00797E79 /* ValidatorRegexpTests.swift */; };
 		57DE77461E16372400D5EE81 /* EGFormValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DE773C1E16372400D5EE81 /* EGFormValidator.framework */; };
 		57DE77681E1637A400D5EE81 /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77581E1637A400D5EE81 /* String+Email.swift */; };
 		57DE77691E1637A400D5EE81 /* UILabel+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE77591E1637A400D5EE81 /* UILabel+Error.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		578650CD1E22DEF100797E79 /* ValidatorViewController+Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+Regexp.swift"; path = "Classes/ValidatorViewController+Regexp.swift"; sourceTree = "<group>"; };
+		578650D01E22DFBF00797E79 /* ValidatorRegexpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRegexpTests.swift; sourceTree = "<group>"; };
 		57DE773C1E16372400D5EE81 /* EGFormValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EGFormValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE77451E16372400D5EE81 /* EGFormValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EGFormValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE774C1E16372400D5EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				57DE783E1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift */,
 				57DE78401E1AE93B00D5EE81 /* ValidatorDigitsOnlyTests.swift */,
 				57DE78421E1AEA5700D5EE81 /* ValidatorAlphaNumericTests.swift */,
+				578650D01E22DFBF00797E79 /* ValidatorRegexpTests.swift */,
 			);
 			path = EGFormValidatorTests;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				57DE78411E1AE93B00D5EE81 /* ValidatorDigitsOnlyTests.swift in Sources */,
 				57DE78331E1AD0DA00D5EE81 /* EmailTests.swift in Sources */,
 				57DE78351E1AD26200D5EE81 /* ValidatorEmailTests.swift in Sources */,
+				578650D11E22DFBF00797E79 /* ValidatorRegexpTests.swift in Sources */,
 				57DE782F1E1AC79100D5EE81 /* UITextViewTests.swift in Sources */,
 				57DE782D1E1AC62900D5EE81 /* UITextFieldTests.swift in Sources */,
 				57DE78391E1ADCE600D5EE81 /* ValidatorMinlengthTests.swift in Sources */,
