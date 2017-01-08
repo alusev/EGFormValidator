@@ -60,4 +60,24 @@ class ValidatorMinlengthTests: XCTestCase {
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3)
         XCTAssert(vc.validate(), "A values has more than enough characters")
     }
+    
+    
+    
+    func testCondition0() {
+        textField.text = "123"
+        vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3) { () -> Bool in
+            return false
+        }
+        XCTAssert(vc.validate(), "Condition implies that the field is not required to have at least 3 characters")
+        
+    }
+    
+    
+    func testCondition1() {
+        textField.text = "12"
+        vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3) { () -> Bool in
+            return true
+        }
+        XCTAssertFalse(vc.validate(), "Condition implies that the field must have at least 3 characters")
+    }
 }

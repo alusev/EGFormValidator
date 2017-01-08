@@ -46,11 +46,36 @@ public extension ValidatorViewController {
                                                   errorMessage: String)
                             where UIViewThatConformsValidatableProtocol: Validatable {
             
-        let aValidator = Validator(control: control,
-                                   predicate: MandatoryValidator,
-                                   predicateParameters: [],
-                                   errorPlaceholder: errorPlaceholder,
-                                   errorMessage: errorMessage)
-        self.add(validator: aValidator)
+        self.addValidatorMandatory(toControl: control,
+                            errorPlaceholder: errorPlaceholder,
+                                errorMessage: errorMessage,
+                                   condition: { return true })
+    }
+    
+    
+    
+    
+    
+    /**
+     Adds mandatory validator with condition
+     
+     - Parameter control: A control to be validated. The control must adopt `UIViewThatConformsValidatableProtocol`
+     - Parameter errorPlaceholder: An object that will display an error message
+     - Parameter errorMessage: A message that will be displayed in the errorPlaceholder object
+     - Parameter condition: A condition when the validator must be executed
+     */
+    public func addValidatorMandatory<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control: UIViewThatConformsValidatableProtocol?,
+                                              errorPlaceholder: ValidationErrorDisplayable?,
+                                                  errorMessage: String,
+                                                     condition: @escaping ValidatorCondition)
+        where UIViewThatConformsValidatableProtocol: Validatable {
+            
+            let aValidator = Validator(control: control,
+                                       predicate: MandatoryValidator,
+                                       predicateParameters: [],
+                                       errorPlaceholder: errorPlaceholder,
+                                       errorMessage: errorMessage)
+            self.add(validator: aValidator, condition: condition)
     }
 }

@@ -45,15 +45,38 @@ extension ValidatorViewController {
                                                      minLength: Int)
                             where UIViewThatConformsValidatableProtocol: Validatable {
             
-            let aValidator = Validator(control: control,
-                                       predicate: MinlengthValidator,
-                                       predicateParameters: [minLength],
-                                       errorPlaceholder: errorPlaceholder,
-                                       errorMessage: String(format: errorMessage, minLength))
-            self.add(validator: aValidator)
+            self.addValidatorMinLength(toControl: control,
+                                errorPlaceholder: errorPlaceholder,
+                                    errorMessage: errorMessage,
+                                       minLength: minLength,
+                                       condition: { return true })
     }
     
 
     
     
+    /**
+     Adds minlength validator with condition
+     
+     - Parameter control: A control to be validated. The control must adopt `UIViewThatConformsValidatableProtocol`
+     - Parameter errorPlaceholder: An object that will display an error message
+     - Parameter errorMessage: A message that will be displayed in the errorPlaceholder object
+     - Parameter minLength: A minimum number of characters required for control
+     - Parameter condition: A condition when the validator must be executed
+     */
+    public func addValidatorMinLength<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control: UIViewThatConformsValidatableProtocol?,
+                                              errorPlaceholder: ValidationErrorDisplayable?,
+                                                  errorMessage: String,
+                                                     minLength: Int,
+                                                     condition: @escaping ValidatorCondition)
+        where UIViewThatConformsValidatableProtocol: Validatable {
+            
+            let aValidator = Validator(control: control,
+                                       predicate: MinlengthValidator,
+                                       predicateParameters: [minLength],
+                                       errorPlaceholder: errorPlaceholder,
+                                       errorMessage: String(format: errorMessage, minLength))
+            self.add(validator: aValidator, condition: condition)
+    }
 }

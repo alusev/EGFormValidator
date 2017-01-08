@@ -40,11 +40,35 @@ public extension ValidatorViewController {
                                                   errorMessage: String)
                             where UIViewThatConformsValidatableProtocol: Validatable {
             
+            self.addValidatorDigitsOnly(toControl: control,
+                                 errorPlaceholder: errorPlaceholder,
+                                     errorMessage: errorMessage,
+                                        condition: { return true })
+    }
+    
+    
+    
+    
+    /**
+     Adds digits-only validator with condition
+     
+     - Parameter control: A control to be validated. The control must adopt `UIViewThatConformsValidatableProtocol`
+     - Parameter errorPlaceholder: An object that will display an error message
+     - Parameter errorMessage: A message that will be displayed in the errorPlaceholder object
+     - Parameter condition: A condition when the validator must be executed
+     */
+    public func addValidatorDigitsOnly<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control: UIViewThatConformsValidatableProtocol?,
+                                              errorPlaceholder: ValidationErrorDisplayable?,
+                                              errorMessage: String,
+                                              condition: @escaping ValidatorCondition)
+        where UIViewThatConformsValidatableProtocol: Validatable {
+            
             let aValidator = Validator(control: control,
                                        predicate: DigitsValidator,
                                        predicateParameters: [],
                                        errorPlaceholder: errorPlaceholder,
                                        errorMessage: errorMessage)
-            self.add(validator: aValidator)
+            self.add(validator: aValidator, condition: condition)
     }
 }

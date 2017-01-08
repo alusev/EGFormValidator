@@ -91,12 +91,39 @@ public extension ValidatorViewController {
                                     compareWithControl control2: UIViewThatConformsValidatableProtocol?)
                             where UIViewThatConformsValidatableProtocol: Validatable {
         
-        let aValidator = Validator(control: control1,
-                                   predicate: EqualtyValidator,
-                                   predicateParameters: [control2],
-                                   errorPlaceholder: errorPlaceholder,
-                                   errorMessage: errorMessage)
-        self.add(validator: aValidator)
+        self.addValidatorEqualTo(toControl: control1,
+                          errorPlaceholder: errorPlaceholder,
+                              errorMessage: errorMessage,
+                        compareWithControl: control2,
+                                 condition: { return true })
     }
 
+    
+    
+    /**
+     Adds equalTo validator with condition
+     
+     - Parameter control1: A control to be validated. The control must adopt `UIViewThatConformsValidatableProtocol`
+     - Parameter errorPlaceholder: An object that will display an error message
+     - Parameter errorMessage: A message that will be displayed in the errorPlaceholder object
+     - Parameter control2: A control to be compared with. The control must adopt `UIViewThatConformsValidatableProtocol`
+     - Parameter condition: A condition when the validator must be executed
+     */
+    public func addValidatorEqualTo<UIViewThatConformsValidatableProtocol: UIView>
+                                            (toControl control1: UIViewThatConformsValidatableProtocol?,
+                                               errorPlaceholder: ValidationErrorDisplayable?,
+                                                   errorMessage: String,
+                                    compareWithControl control2: UIViewThatConformsValidatableProtocol?,
+                                                      condition: @escaping ValidatorCondition)
+        where UIViewThatConformsValidatableProtocol: Validatable {
+            
+            let aValidator = Validator(control: control1,
+                                       predicate: EqualtyValidator,
+                                       predicateParameters: [control2],
+                                       errorPlaceholder: errorPlaceholder,
+                                       errorMessage: errorMessage)
+            self.add(validator: aValidator, condition: condition)
+    }
+    
+    
 }
