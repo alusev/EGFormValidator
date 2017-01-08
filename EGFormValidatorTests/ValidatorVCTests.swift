@@ -214,5 +214,108 @@ class ValidatorVCTests: XCTestCase {
         XCTAssertEqual(firstControl.tag, vc.firstFailedControl?.tag)
     }
     
-
+    
+    
+    
+    func testCondition0() {
+        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return true
+        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        
+        vc.add(validator: validator1, condition: { () -> Bool in
+            return true
+        })
+            
+        XCTAssert(vc.validate(), "Default validator behaviour")
+            
+        
+        let validator2 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return false
+        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "V2 ERROR")
+        vc.add(validator: validator2, condition: { () -> Bool in
+            return true
+        })
+        XCTAssertFalse(vc.validate(), "Default validator behaviour should return false")
+        
+    }
+    
+    
+    
+    func testCondition1() {
+        let validator3 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return true
+        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        
+        vc.add(validator: validator3, condition: { () -> Bool in
+            return false
+        })
+        
+        XCTAssert(vc.validate(), "Validator should never be executed")
+    }
+    
+    
+    
+    
+    func testCondition2() {
+        let validator4 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return false
+        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        
+        vc.add(validator: validator4, condition: { () -> Bool in
+            return false
+        })
+        
+        XCTAssert(vc.validate(), "Validator should never be executed")
+    }
+    
+    
+    func testCondition3() {
+        // chain validation
+        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return false
+        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        
+        vc.add(validator: validator1, condition: { () -> Bool in
+            return false
+        })
+        
+        
+        // chain validation
+        let label = UILabel()
+        let validator2 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return false
+        }, predicateParameters: [], errorPlaceholder: label, errorMessage: "ERROR")
+        
+        vc.add(validator: validator2)
+        
+        XCTAssertFalse(vc.validate(), "Validation should fail")
+        XCTAssertEqual(label.text, "ERROR")
+    }
+    
+    
+    
+    func testCondition4() {
+        // chain validation
+        let label1 = UILabel()
+        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return false
+        }, predicateParameters: [], errorPlaceholder: label1, errorMessage: "ERROR1")
+        
+        vc.add(validator: validator1, condition: { () -> Bool in
+            return true
+        })
+        
+        
+        // chain validation
+        let label2 = UILabel()
+        let validator2 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
+            return false
+        }, predicateParameters: [], errorPlaceholder: label2, errorMessage: "ERROR2")
+        
+        vc.add(validator: validator2)
+        
+        XCTAssertFalse(vc.validate(), "Validation should fail")
+        XCTAssertEqual(label1.text, "ERROR1")
+        XCTAssertEqual(label2.text, "ERROR2")
+    }
 }
