@@ -34,6 +34,7 @@ A simple form validation library written in Swift 3.0.
   * DigitsOnly
   * EqualTo (an input value equals to another inputs value)
   * AlphaNumeric
+  * Regular expressions
 
 * Custom validators
 
