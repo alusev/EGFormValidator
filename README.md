@@ -271,14 +271,14 @@ extension SomeCustomView: ValidationErrorDisplayable {
 
 ### Conditional validation
 
-You can define wheather you want to apply a specific validator or not. Simply add a condition to validator.
+You can define wheather you want to apply a specific validator or not. Simply add a condition to a validator.
 
 For a custom validator:
 
 ```swift
 self.add(validator: aValidator, condition: { () -> Bool {
    return false // return true if you want to apply this validator and false otherwise
-}
+})
 ```
 
 For a core validator: 
@@ -286,8 +286,9 @@ For a core validator:
 // in this case it's digit-only validator, the same syntax is applied to the others
 self.addValidatorDigitsOnly(toControl: self.myTextfield,
                              errorPlaceholder: self.myTextfieldErrorLabel,
-                                 errorMessage: "Digits only please")
-
+                                 errorMessage: "Digits only please") { () -> Bool {
+   return false // return true if you want to apply this validator and false otherwise
+}
 ```
 
 Let's say if you have two fields: a landline and a cellphone. And you want a user to fill in at least one of them.
