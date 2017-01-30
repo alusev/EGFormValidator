@@ -3,5 +3,5 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'EGFormValidatorExample' do
-    pod 'EGFormValidator', :git => 'https://github.com/alusev/EGFormValidator.git', :branch => 'master'
+    pod 'EGFormValidator'
 end

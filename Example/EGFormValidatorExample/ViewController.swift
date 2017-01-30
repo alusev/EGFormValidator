@@ -23,6 +23,8 @@ class ViewController: ValidatorViewController {
     @IBOutlet weak var equaltyTextField_2: UITextField!
     @IBOutlet weak var alphaNumericTextField: UITextField!
     @IBOutlet weak var regexpTextField: UITextField!
+    @IBOutlet weak var conditionalTextField_1: UITextField!
+    @IBOutlet weak var conditionalTextField_2: UITextField!
     @IBOutlet weak var customStyledTextField: UITextField!
     
     
@@ -35,6 +37,8 @@ class ViewController: ValidatorViewController {
     @IBOutlet weak var equaltyErrorLabel: UILabel!
     @IBOutlet weak var regexpErrorLabel: UILabel!
     @IBOutlet weak var aphaNumericErrorLabel: UILabel!
+    @IBOutlet weak var conditionalErrorLabel_1: UILabel!
+    @IBOutlet weak var conditionalErrorLabel_2: UILabel!
     
     
     
@@ -51,6 +55,8 @@ class ViewController: ValidatorViewController {
         self.equaltyErrorLabel.text = ""
         self.aphaNumericErrorLabel.text = ""
         self.regexpErrorLabel.text = ""
+        self.conditionalErrorLabel_1.text = ""
+        self.conditionalErrorLabel_2.text = ""
         
         
         // add validators
@@ -117,6 +123,47 @@ class ViewController: ValidatorViewController {
                          errorPlaceholder: self.regexpErrorLabel,
                              errorMessage: "String doesn't match regular expression: ^\\d\\s\\d+$",
                                   pattern: "^\\d\\s\\d+$")
+        
+        
+        
+        //
+        // Conditional validators
+        // This mandatory rule will be fired only if the other textfield is empty
+        self.addValidatorMandatory(toControl: self.conditionalTextField_1,
+                            errorPlaceholder: self.conditionalErrorLabel_1,
+                                errorMessage: "Enter a value in the field above or below") { () -> Bool in
+            // Check if there's any value in the other textfield
+            if let condTF2 = self.conditionalTextField_2.getValue() as? String, condTF2.characters.count > 0 {
+                return false
+            }
+            return true
+        }
+        
+        
+        // This mandatory rule will be fired only if the other textfield is empty
+        self.addValidatorMandatory(toControl: self.conditionalTextField_2,
+                            errorPlaceholder: self.conditionalErrorLabel_2,
+                                errorMessage: "Enter a value in one of the fields above") { () -> Bool in
+            // Check if there's any value in the other textfield
+            if let condTF1 = self.conditionalTextField_1.getValue() as? String, condTF1.characters.count > 0 {
+                return false
+            }
+            return true
+        }
+        
+        // This rule validates the first textfield and it will be fired if the first textfield is not empty.
+        self.addValidatorDigitsOnly(toControl: self.conditionalTextField_1,
+                             errorPlaceholder: self.conditionalErrorLabel_1,
+                                 errorMessage: "Only digits are allowed in the first textfield")
+        
+        // This rule validates the second textfield and it will be fired if the second textfield is not empty.
+        self.addValidatorRegexp(toControl: self.conditionalTextField_2,
+                         errorPlaceholder: self.conditionalErrorLabel_2,
+                             errorMessage: "Only latin letters are allowed in the second textfield",
+                                  pattern: "^[A-Za-z]*$")
+        
+        
+        
         
         // Custom styled textfield
         // In this case it doesn't matter which validator we use.
