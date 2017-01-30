@@ -298,7 +298,7 @@ Let's say if you have two fields: a landline and a cellphone. And you want a use
 self.addValidatorMandatory(toControl: self.cellphoneTextfield,
                    errorPlaceholder: self.cellphoneErrorLabel,
                        errorMessage: "Please enter your home phone number or your cellphone") { [unowned self] () -> Bool in
-       if let landline = self.landlineTextfield.getValue() as? String, landline.characters.count > 1 {
+       if let landline = self.landlineTextfield.getValue() as? String, landline.characters.count > 0 {
            return false
        }
        return true
@@ -307,7 +307,7 @@ self.addValidatorMandatory(toControl: self.cellphoneTextfield,
 self.addValidatorMandatory(toControl: self.landlineTextfield,
                    errorPlaceholder: self.landlineErrorLabel,
                        errorMessage: "Please enter your home phone number or your cellphone") { [unowned self] () -> Bool in
-       if let cellphone = self.cellphoneTextfield.getValue() as? String, cellphone.characters.count > 1 {
+       if let cellphone = self.cellphoneTextfield.getValue() as? String, cellphone.characters.count > 0 {
            return false
        }
 
