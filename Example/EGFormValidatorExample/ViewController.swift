@@ -22,6 +22,7 @@ class ViewController: ValidatorViewController {
     @IBOutlet weak var equaltyTextField_1: UITextField!
     @IBOutlet weak var equaltyTextField_2: UITextField!
     @IBOutlet weak var alphaNumericTextField: UITextField!
+    @IBOutlet weak var regexpTextField: UITextField!
     @IBOutlet weak var customStyledTextField: UITextField!
     
     
@@ -32,6 +33,7 @@ class ViewController: ValidatorViewController {
     @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var digitsOnlyErrorLabel: UILabel!
     @IBOutlet weak var equaltyErrorLabel: UILabel!
+    @IBOutlet weak var regexpErrorLabel: UILabel!
     @IBOutlet weak var aphaNumericErrorLabel: UILabel!
     
     
@@ -47,6 +49,8 @@ class ViewController: ValidatorViewController {
         self.emailErrorLabel.text = ""
         self.digitsOnlyErrorLabel.text = ""
         self.equaltyErrorLabel.text = ""
+        self.aphaNumericErrorLabel.text = ""
+        self.regexpErrorLabel.text = ""
         
         
         // add validators
@@ -108,6 +112,11 @@ class ViewController: ValidatorViewController {
                                    errorMessage: "Only letters and digits are allowed")
         
         
+        // Regular Expression validator
+        self.addValidatorRegexp(toControl: self.regexpTextField,
+                         errorPlaceholder: self.regexpErrorLabel,
+                             errorMessage: "String doesn't match regular expression: ^\\d\\s\\d+$",
+                                  pattern: "^\\d\\s\\d+$")
         
         // Custom styled textfield
         // In this case it doesn't matter which validator we use.
