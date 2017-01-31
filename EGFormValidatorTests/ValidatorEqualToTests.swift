@@ -150,6 +150,15 @@ class ValidatorEqualToTests: XCTestCase {
     }
     
     
+    func testValidator6() {
+        let customControl1 = CustomControlArray()
+        let customControl2 = CustomControlArray()
+        vc.addValidatorEqualTo(toControl: customControl1, errorPlaceholder: placeholder, errorMessage: "ERROR", compareWithControl: customControl2)
+        
+        XCTAssertFalse(vc.validate(), "Fields are of unknown type")
+    }
+    
+    
     func testCondition0() {
         textField1.text = "12345"
         textField2.text = "1234"
@@ -203,5 +212,12 @@ class CustomControlNil: UIView, Validatable {
     
     func getValue() -> Any? {
         return returnNil ? nil : "not nil value"
+    }
+}
+
+
+class CustomControlArray: UIView, Validatable {
+    func getValue() -> Any? {
+        return ["array"]
     }
 }
