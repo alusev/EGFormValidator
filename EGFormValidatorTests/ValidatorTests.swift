@@ -35,7 +35,7 @@ class ValidatorTests: XCTestCase {
         let textField = UITextField()
         textField.text = "Some value"
         let validator3 = Validator(control: textField, predicate: { (a, b) -> Bool in
-            let stringValue: String = a as? String ?? ""
+            let stringValue = a as? String
             XCTAssertEqual(stringValue, textField.text, "The first predicate's parameter is not beeing passed")
             return true
         }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
