@@ -30,6 +30,17 @@ class ValidatorEqualToTests: XCTestCase {
         super.tearDown()
     }
     
+    func testRetNil() {
+        let control = CustomControlNil()
+        XCTAssertNil(control.getValue())
+        
+        control.returnNil = true
+        XCTAssertNil(control.getValue())
+
+        control.returnNil = false
+        XCTAssertNotNil(control.getValue())
+    }
+    
     
     func testValidator0() {
         vc.addValidatorEqualTo(toControl: textField1, errorPlaceholder: placeholder, errorMessage: "ERROR", compareWithControl: textField2)
@@ -123,6 +134,21 @@ class ValidatorEqualToTests: XCTestCase {
     }
 
     
+    func testValidator5() {
+        let alwaysNil1 = CustomControlNil()
+        let alwaysNil2 = CustomControlNil()
+        vc.addValidatorEqualTo(toControl: alwaysNil1, errorPlaceholder: placeholder, errorMessage: "ERROR", compareWithControl: alwaysNil2)
+        
+        XCTAssert(vc.validate(), "Fields are not equal")
+        
+        alwaysNil1.returnNil = false
+        XCTAssertFalse(vc.validate(), "Fields are equal")
+        
+        alwaysNil1.returnNil = true
+        alwaysNil2.returnNil = false
+        XCTAssertFalse(vc.validate(), "Fields are equal")
+    }
+    
     
     func testCondition0() {
         textField1.text = "12345"
@@ -169,5 +195,13 @@ class CustomControlCharacter: UIView, Validatable {
     
     func getValue() -> Any? {
         return value
+    }
+}
+
+class CustomControlNil: UIView, Validatable {
+    var returnNil: Bool = true
+    
+    func getValue() -> Any? {
+        return returnNil ? nil : "not nil value"
     }
 }
