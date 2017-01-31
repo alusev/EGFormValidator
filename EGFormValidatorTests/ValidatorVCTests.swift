@@ -12,6 +12,13 @@ import XCTest
 class ValidatorVCTests: XCTestCase {
     var vc: ValidatorViewController!
     
+    let validatorPredicateTrue: ValidatorPredicate = { (param1, param2) -> Bool in
+        return true
+    }
+    
+    let validatorPredicateFalse: ValidatorPredicate = { (param1, param2) -> Bool in
+        return false
+    }
     
     override func setUp() {
         super.setUp()
@@ -24,11 +31,14 @@ class ValidatorVCTests: XCTestCase {
         super.tearDown()
     }
     
+    func testValidatorPredicates() {
+        XCTAssert(validatorPredicateTrue(nil, [nil]))
+        XCTAssertFalse(validatorPredicateFalse(nil, [nil]))
+    }
+    
     
     func testAdd0() {
-        let validator = Validator(control: UITextField(), predicate: { (a, b) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         
         vc.add(validator: validator)
         XCTAssert(vc.validate(), "Predicate return false but form is valid")
@@ -36,9 +46,7 @@ class ValidatorVCTests: XCTestCase {
     
     
     func testAdd1() {
-        let validator = Validator(control: UITextField(), predicate: { (a, b) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator = Validator(control: UITextField(), predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         
         vc.add(validator: validator)
         XCTAssertFalse(vc.validate(), "Predicate return true but form is invalid")
@@ -51,25 +59,19 @@ class ValidatorVCTests: XCTestCase {
         
         
         // Test 1 field
-        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator1 = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator1)
         XCTAssert(vc.validate(), "Predicate return true but form is invalid")
 
         
         // test 2 different fields
-        let validator2 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator2 = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator2)
         XCTAssert(vc.validate(), "Predicates return true but form is invalid")
 
         
         // test invalid field
-        let validator3 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator3 = Validator(control: UITextField(), predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator3)
         XCTAssertFalse(vc.validate(), "One of the validators return false but form is valid")
     }
@@ -81,14 +83,10 @@ class ValidatorVCTests: XCTestCase {
         let errorPlaceholder = UILabel()
         
         // First passes
-        let validator1 = Validator(control: control, predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
+        let validator1 = Validator(control: control, predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
         vc.add(validator: validator1)
         
-        let validator2 = Validator(control: control, predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "V2 ERROR")
+        let validator2 = Validator(control: control, predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "V2 ERROR")
         vc.add(validator: validator2)
 
         XCTAssertFalse(vc.validate(), "One of the validators return false but form is valid")
@@ -96,18 +94,17 @@ class ValidatorVCTests: XCTestCase {
 
         
         // Third and forth are never executed
-        let validator3 = Validator(control: control, predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
+        XCTAssert(validatorPredicateTrue(nil, [nil]))
+        
+        let validator3 = Validator(control: control, predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
         vc.add(validator: validator3)
         
         XCTAssertFalse(vc.validate(), "One of the validators return false but form is valid")
         XCTAssertEqual(errorPlaceholder.text ?? "", "V2 ERROR")
         
         
-        let validator4 = Validator(control: control, predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "V4 ERROR")
+        
+        let validator4 = Validator(control: control, predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "V4 ERROR")
         vc.add(validator: validator4)
         XCTAssertFalse(vc.validate(), "One of the validators return false but form is valid")
         XCTAssertEqual(errorPlaceholder.text ?? "", "V2 ERROR")
@@ -115,9 +112,7 @@ class ValidatorVCTests: XCTestCase {
     
 
     func testFirstFailed0() {
-        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator1 = Validator(control: UITextField(), predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator1)
         
         XCTAssertNil(vc.firstFailedControl, "A not validated form has already a failed control")
@@ -126,14 +121,10 @@ class ValidatorVCTests: XCTestCase {
 
     func testFirstFailed1() {
         // form is valid
-        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator1 = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator1)
         
-        let validator2 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator2 = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator2)
         
         XCTAssert(vc.validate(), "A form has only valid values")
@@ -146,9 +137,7 @@ class ValidatorVCTests: XCTestCase {
         let firstControl = UITextField()
         firstControl.tag = 99
         
-        let validator = Validator(control: firstControl, predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator = Validator(control: firstControl, predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator)
         XCTAssertFalse(vc.validate(), "A form has just one but invalid field")
         
@@ -162,19 +151,13 @@ class ValidatorVCTests: XCTestCase {
         let firstControl = UITextField()
         firstControl.tag = 99
         
-        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator1 = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         vc.add(validator: validator1)
         
-        let validator2 = Validator(control: firstControl, predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "V2 ERROR")
+        let validator2 = Validator(control: firstControl, predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "V2 ERROR")
         vc.add(validator: validator2)
         
-        let validator3 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "V3 ERROR")
+        let validator3 = Validator(control: UITextField(), predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "V3 ERROR")
         vc.add(validator: validator3)
 
         
@@ -192,9 +175,7 @@ class ValidatorVCTests: XCTestCase {
         let errorPlaceholder = UILabel()
         
         // First passes
-        let validator1 = Validator(control: firstControl, predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
+        let validator1 = Validator(control: firstControl, predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
         vc.add(validator: validator1)
         
         let validator2 = Validator(control: firstControl, predicate: { (param1, param2) -> Bool in
@@ -204,9 +185,7 @@ class ValidatorVCTests: XCTestCase {
         
         
         // Third and forth are never executed
-        let validator3 = Validator(control: firstControl, predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
+        let validator3 = Validator(control: firstControl, predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: errorPlaceholder, errorMessage: "")
         vc.add(validator: validator3)
         
         XCTAssertFalse(vc.validate(), "One of the validators return false but form is valid")
@@ -218,9 +197,7 @@ class ValidatorVCTests: XCTestCase {
     
     
     func testCondition0() {
-        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator1 = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         
         vc.add(validator: validator1, condition: { () -> Bool in
             return true
@@ -242,9 +219,7 @@ class ValidatorVCTests: XCTestCase {
     
     
     func testCondition1() {
-        let validator3 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return true
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator3 = Validator(control: UITextField(), predicate: validatorPredicateTrue, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         
         vc.add(validator: validator3, condition: { () -> Bool in
             return false
@@ -257,9 +232,7 @@ class ValidatorVCTests: XCTestCase {
     
     
     func testCondition2() {
-        let validator4 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator4 = Validator(control: UITextField(), predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         
         vc.add(validator: validator4, condition: { () -> Bool in
             return false
@@ -271,9 +244,7 @@ class ValidatorVCTests: XCTestCase {
     
     func testCondition3() {
         // chain validation
-        let validator1 = Validator(control: UITextField(), predicate: { (param1, param2) -> Bool in
-            return false
-        }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
+        let validator1 = Validator(control: UITextField(), predicate: validatorPredicateFalse, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         
         vc.add(validator: validator1, condition: { () -> Bool in
             return false
