@@ -32,20 +32,21 @@ class ValidatorMaxlengthTests: XCTestCase {
     func testMaxlength() {
         textField.maxLength = 5
         textField.text = "qwe"
+        textField.limitLength(textField: textField)
         XCTAssertEqual(textField.text?.characters.count, 3)
         
-        textField.maxLength = 5
+    
         textField.text = "qwert"
+        textField.limitLength(textField: textField)
         XCTAssertEqual(textField.text?.characters.count, 5)
         
-        textField.maxLength = 5
         textField.text = "qwerty"
-        XCTAssertEqual(textField.text?.characters.count, 6)
+        textField.limitLength(textField: textField)
+        XCTAssertEqual(textField.text?.characters.count, 5)
         
         // test getter
         textField.maxLength = 15
+        textField.limitLength(textField: textField)
         XCTAssertEqual(textField.maxLength, 15)
     }
-    
-    // TODO: add UI tests
 }
