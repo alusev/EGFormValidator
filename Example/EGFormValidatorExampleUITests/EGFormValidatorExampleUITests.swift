@@ -9,7 +9,7 @@
 import XCTest
 
 class EGFormValidatorExampleUITests: XCTestCase {
-        
+
     override func setUp() {
         super.setUp()
         
