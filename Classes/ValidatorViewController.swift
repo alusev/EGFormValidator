@@ -18,7 +18,6 @@ open class ValidatorViewController: UIViewController {
     private var validatorConditions = [ValidatorCondition]()
     
     
-    
     /**
      Adds a new unconditional validator to a validation list
      

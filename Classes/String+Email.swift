@@ -12,7 +12,6 @@ import Foundation
 extension String {
     /**
      Validates the string if it's a valid email address
-     
      - Returns: `True` is the string is a valid email address
      */
     func isValidEmail() -> Bool {

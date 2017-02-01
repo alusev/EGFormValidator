@@ -22,7 +22,6 @@ import UIKit
     
     /**
      An _optional_ delegate method that gets called after validation to set its validation state
-     
      - Parameter state: a state of the control after validation.
      */
     @objc optional func setValidation(state: ValidatableControlState)

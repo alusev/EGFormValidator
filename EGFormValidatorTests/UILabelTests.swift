@@ -31,4 +31,5 @@ class UILabelTests: XCTestCase {
         label.setErrorMessage(errorMessage: "Some message")
         XCTAssertEqual(label.text, "Some message")
     }
+
 }

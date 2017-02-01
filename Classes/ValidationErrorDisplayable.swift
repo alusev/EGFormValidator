@@ -17,7 +17,6 @@ public protocol ValidationErrorDisplayable {
     
     /**
      A required delegate method that is in charge to properly display an error message
-     
      - Parameter errorMessage: an error message to be shown when a validator fails
      */
     func setErrorMessage(errorMessage: String?)
