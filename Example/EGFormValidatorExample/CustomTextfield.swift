@@ -11,7 +11,7 @@ import Foundation
 import EGFormValidator
 
 class CustomTextfield: UITextField, UITextFieldDelegate {
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
