@@ -10,7 +10,7 @@ import XCTest
 @testable import EGFormValidator
 
 class UILabelTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,6 +29,6 @@ class UILabelTests: XCTestCase {
     func testMethod() {
         let label = UILabel()
         label.setErrorMessage(errorMessage: "Some message")
-        XCTAssertEqual(label.text, "Some message")        
+        XCTAssertEqual(label.text, "Some message")
     }
 }

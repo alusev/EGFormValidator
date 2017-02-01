@@ -10,7 +10,7 @@ import XCTest
 @testable import EGFormValidator
 
 class ValidatorDigitsOnlyTests: XCTestCase {
-    
+
     var vc: ValidatorViewController!
     var textField: UITextField!
     var placeholder: UILabel!

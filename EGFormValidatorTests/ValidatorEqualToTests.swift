@@ -15,7 +15,6 @@ class ValidatorEqualToTests: XCTestCase {
     var textField2: UITextField!
     var placeholder: UILabel!
     
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.

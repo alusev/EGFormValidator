@@ -13,7 +13,7 @@ class ValidatorRegexpTests: XCTestCase {
     var vc: ValidatorViewController!
     var textField: UITextField!
     var placeholder: UILabel!
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,9 +26,6 @@ class ValidatorRegexpTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    
-    
     
     func testValidator0() {
         textField.text = ""

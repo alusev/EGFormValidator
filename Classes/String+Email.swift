@@ -9,7 +9,7 @@
 import Foundation
 
 /// The extension adds a method to check if a string is an email address
-extension String {    
+extension String {
     /**
      Validates the string if it's a valid email address
      

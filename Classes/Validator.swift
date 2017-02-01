@@ -15,7 +15,7 @@ public typealias ValidatorPredicate = (Any?, [Any?]) -> Bool
 
 /// `Validator`
 public struct Validator {
-    
+
     /// A control to be validated
     var control: Validatable?
     

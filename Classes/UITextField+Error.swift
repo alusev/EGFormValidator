@@ -18,7 +18,6 @@ extension UITextField: Validatable {
     public func getValue() -> Any? {
         return self.text
     }
-    
 }
 
 
