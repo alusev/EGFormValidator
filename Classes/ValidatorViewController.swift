@@ -57,23 +57,23 @@ open class ValidatorViewController: UIViewController {
         // a set of  invalidated controls
         var inValidatedControls = Set<UIView>()
         self.firstFailedControl = nil
-        
+
         for (index, validator) in validators.enumerated() {
             var isControlValid = false
-            
+
             // all controls should be UIViews so there shouldn't be any problem
             if let control = validator.control as? UIView {
-                
+
                 // validate it again only if it passed previous validation
                 if !inValidatedControls.contains(control) {
                     // the control is not validated yet
                     // or it has been already validated and it passed all its previus validations
-                    
+
                     // check conditions
                     if validatorConditions[index]() {
                         // get validation result
                         isControlValid = validator.validate()
-                        
+
                         if isControlValid {
                             // control is valid
                             validator.control?.setValidation?(state: .valid)
@@ -82,10 +82,10 @@ open class ValidatorViewController: UIViewController {
                             // control is not valid
                             validator.control?.setValidation?(state: .error)
                             validator.errorPlaceholder?.setErrorMessage(errorMessage: validator.errorMessage)
-                            
+
                             // add the control to inValidatedControls set
                             inValidatedControls.insert(control)
-                            
+
                             if self.firstFailedControl == nil {
                                 self.firstFailedControl = control
                             }
@@ -99,7 +99,7 @@ open class ValidatorViewController: UIViewController {
                     }
                 }
             }
-            
+
             // add the current control validation results to output
             formIsValid = formIsValid && isControlValid
         }

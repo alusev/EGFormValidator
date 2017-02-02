@@ -34,17 +34,17 @@ extension Validatable where Self: UIView {}
 
 /**
  A list of states of an object that conforms `Validatable` protocol:
- 
+
  **normal**
  
  The control has not been validated yet. This is default state
- 
+
  **valid**
- 
+
  The control has been validated and it's valid
- 
+
  **error**
- 
+
  The control has been validated and it's not valid
  */
 @objc public enum ValidatableControlState: Int {
