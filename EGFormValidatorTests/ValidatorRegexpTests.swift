@@ -21,12 +21,12 @@ class ValidatorRegexpTests: XCTestCase {
         textField = UITextField()
         placeholder = UILabel()
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testValidator0() {
         textField.text = ""
         vc.addValidatorRegexp(toControl: textField,
@@ -34,13 +34,11 @@ class ValidatorRegexpTests: XCTestCase {
                            errorMessage: "ERROR",
                                 pattern: "^a910")
         XCTAssertFalse(vc.validate())
-        
-        
+
         textField.text = "a910xxxxx"
         XCTAssert(vc.validate())
     }
-    
-    
+
     func testValidator1() {
         textField.text = "+79601234567"
         vc.addValidatorRegexp(toControl: textField,
@@ -48,9 +46,9 @@ class ValidatorRegexpTests: XCTestCase {
                               errorMessage: "ERROR",
                               pattern: "^(8|\\+7)\\d{10}$")
         XCTAssert(vc.validate())
-        
-        
+
         textField.text = "89601234567"
         XCTAssert(vc.validate())
     }
+
 }

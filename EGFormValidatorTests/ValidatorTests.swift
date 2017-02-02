@@ -15,23 +15,23 @@ class ValidatorTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testPredicate() {
         let validator1 = Validator(control: UITextField(), predicate: { (a, b) -> Bool in
             return true
         }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         XCTAssert(validator1.validate(), "Validator must return true")
-        
+
         let validator2 = Validator(control: UITextField(), predicate: { (a, b) -> Bool in
             return false
         }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         XCTAssertFalse(validator2.validate(), "Validator must return false")
-    
+
         let textField = UITextField()
         textField.text = "Some value"
         let validator3 = Validator(control: textField, predicate: { (a, b) -> Bool in
@@ -40,7 +40,7 @@ class ValidatorTests: XCTestCase {
             return true
         }, predicateParameters: [], errorPlaceholder: nil, errorMessage: "")
         let _ = validator3.validate()
-        
+
         let predicateParams = ["a", "1", "x"]
         let validator4 = Validator(control: UITextField(), predicate: { (a, b) -> Bool in
             let params = b as! [String]
@@ -49,7 +49,5 @@ class ValidatorTests: XCTestCase {
         }, predicateParameters: predicateParams, errorPlaceholder: nil, errorMessage: "")
         let _ = validator4.validate()
     }
-    
-    
-    
+
 }

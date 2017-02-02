@@ -21,48 +21,42 @@ class ValidatorMinlengthTests: XCTestCase {
         textField = UITextField()
         placeholder = UILabel()
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testValidator0() {
         textField.text = ""
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 10)
         XCTAssert(vc.validate(), "Field is mandatory")
     }
-    
-    
+
     func testValidator1() {
         textField.text = nil
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 10)
         XCTAssert(vc.validate(), "Field is mandatory")
     }
-    
-    
+
     func testValidator2() {
         textField.text = "12"
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3)
         XCTAssertFalse(vc.validate(), "A values has less characters")
     }
-    
-    
+
     func testValidator3() {
         textField.text = "123"
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3)
         XCTAssert(vc.validate(), "A values has enough characters")
     }
-    
-    
+
     func testValidator4() {
         textField.text = "1234"
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3)
         XCTAssert(vc.validate(), "A values has more than enough characters")
     }
-    
-    
-    
+
     func testCondition0() {
         textField.text = "123"
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3) { () -> Bool in
@@ -71,8 +65,7 @@ class ValidatorMinlengthTests: XCTestCase {
         XCTAssert(vc.validate(), "Condition implies that the field is not required to have at least 3 characters")
         
     }
-    
-    
+
     func testCondition1() {
         textField.text = "12"
         vc.addValidatorMinLength(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR", minLength: 3) { () -> Bool in
@@ -80,4 +73,5 @@ class ValidatorMinlengthTests: XCTestCase {
         }
         XCTAssertFalse(vc.validate(), "Condition implies that the field must have at least 3 characters")
     }
+
 }
