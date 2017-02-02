@@ -43,8 +43,11 @@ class ValidatorTests: XCTestCase {
 
         let predicateParams = ["a", "1", "x"]
         let validator4 = Validator(control: UITextField(), predicate: { (a, b) -> Bool in
-            let params = b as! [String]
-            XCTAssertEqual(params, predicateParams, "The second predicate's parameter is not beeing passed")
+            if let params = b as? [String] {
+                XCTAssertEqual(params, predicateParams, "The second predicate's parameter is not beeing passed")
+            } else {
+                XCTFail("Params is not an array of strings")
+            }
             return true
         }, predicateParameters: predicateParams, errorPlaceholder: nil, errorMessage: "")
         let _ = validator4.validate()
