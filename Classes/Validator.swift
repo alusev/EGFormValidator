@@ -52,4 +52,5 @@ public struct Validator {
     public func validate() -> Bool {
         return predicate(control?.getValue(), predicateParameters)
     }
+
 }

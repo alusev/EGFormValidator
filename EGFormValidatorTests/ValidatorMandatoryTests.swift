@@ -89,7 +89,7 @@ class ValidatorMandatoryTests: XCTestCase {
 
 class CustomControl: UIView, Validatable {
     var value: Int?
-    
+
     func getValue() -> Any? {
         return value
     }

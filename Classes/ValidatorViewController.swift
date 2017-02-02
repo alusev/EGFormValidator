@@ -105,4 +105,5 @@ open class ValidatorViewController: UIViewController {
         }
         return formIsValid
     }
+
 }

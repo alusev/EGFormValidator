@@ -63,7 +63,6 @@ class ValidatorMinlengthTests: XCTestCase {
             return false
         }
         XCTAssert(vc.validate(), "Condition implies that the field is not required to have at least 3 characters")
-        
     }
 
     func testCondition1() {

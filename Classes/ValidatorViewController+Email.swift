@@ -10,6 +10,7 @@ import UIKit
 
 /// The extension adds Email validator
 public extension ValidatorViewController {
+
     /**
      Validator's predicate: verifies if given value is a valid email address
      

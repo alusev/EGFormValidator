@@ -10,6 +10,7 @@ import Foundation
 
 /// The extension adds a method to check if a string is an email address
 extension String {
+
     /**
      Validates the string if it's a valid email address
      - Returns: `True` is the string is a valid email address
@@ -19,4 +20,5 @@ extension String {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
     }
+
 }
