@@ -10,7 +10,7 @@ import UIKit
 
 /// The extension that makes all `UITextField` be able to be validated
 extension UITextField: Validatable {
-    
+
     /**
      MARK: - Validatable Protocol Implementation
      - Returns: A control's value

@@ -18,25 +18,19 @@ public struct Validator {
 
     /// A control to be validated
     var control: Validatable?
-    
-    
+
     /// A method that validates the control
     var predicate: ValidatorPredicate
-    
-    
+
     /// A list of other parameters to pass to predicate
     var predicateParameters: [Any?]
-    
-    
+
     /// A placeholder that will display error
     var errorPlaceholder: ValidationErrorDisplayable?
-    
-    
+
     /// An error message to be shown if the control fails validation
     var errorMessage: String
-    
-    
-    
+
     /// Creates `Validator` instance
     ///
     /// - Parameters:
@@ -52,9 +46,7 @@ public struct Validator {
         self.errorPlaceholder = errorPlaceholder
         self.errorMessage = errorMessage
     }
-    
-    
-    
+
     /**
      Performs validation of the control
      

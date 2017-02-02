@@ -10,7 +10,6 @@ import UIKit
 
 /**
  If an object conforms to this protocol, it can be considered as validatable object. Such objects must also be `UIView`
- 
  `UITextField` and `UITextView` adopt this protocol.
  */
 @objc public protocol Validatable: class, NSObjectProtocol {

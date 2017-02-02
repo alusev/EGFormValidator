@@ -10,7 +10,7 @@ import UIKit
 
 /// The extension that makes all `UILabel` be able to display an error
 extension UILabel: ValidationErrorDisplayable {
-    
+
     /**
      MARK: - Validation Error Displayable protocol implementation
      
