@@ -50,7 +50,7 @@ class ValidatorEmailTests: XCTestCase {
         vc.addValidatorEmail(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR")
         XCTAssert(vc.validate(), "Email is valid")
     }
-    
+
     func testCondition0() {
         textField.text = "xxx"
         vc.addValidatorEmail(toControl: textField, errorPlaceholder: placeholder, errorMessage: "ERROR") { () -> Bool in
