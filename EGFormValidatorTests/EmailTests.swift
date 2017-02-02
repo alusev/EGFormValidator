@@ -15,12 +15,12 @@ class EmailTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testStringEmail() {
         XCTAssert("abc@gmail.com".isValidEmail())
         XCTAssert("abc@gmail.com.mx".isValidEmail())
@@ -39,5 +39,5 @@ class EmailTests: XCTestCase {
         XCTAssertFalse("aa@bb.com.".isValidEmail())
         XCTAssertFalse("a,a@bb.com".isValidEmail())
     }
-    
+
 }

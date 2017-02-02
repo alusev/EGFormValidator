@@ -72,4 +72,5 @@ class ValidatorAlphaNumericTests: XCTestCase {
         }
         XCTAssertFalse(vc.validate(), "Condition implies that the field must contain only digits and letters")
     }
+
 }

@@ -32,7 +32,7 @@ class ValidatorEqualToTests: XCTestCase {
     func testRetNil() {
         let control = CustomControlNil()
         XCTAssertNil(control.getValue())
-        
+
         control.returnNil = true
         XCTAssertNil(control.getValue())
 
@@ -174,6 +174,7 @@ class CustomControlFloat: UIView, Validatable {
     func getValue() -> Any? {
         return value
     }
+
 }
 
 class CustomControlDouble: UIView, Validatable {
@@ -182,6 +183,7 @@ class CustomControlDouble: UIView, Validatable {
     func getValue() -> Any? {
         return value
     }
+
 }
 
 class CustomControlCharacter: UIView, Validatable {
@@ -190,6 +192,7 @@ class CustomControlCharacter: UIView, Validatable {
     func getValue() -> Any? {
         return value
     }
+
 }
 
 class CustomControlNil: UIView, Validatable {
@@ -198,10 +201,13 @@ class CustomControlNil: UIView, Validatable {
     func getValue() -> Any? {
         return returnNil ? nil : "not nil value"
     }
+
 }
 
 class CustomControlArray: UIView, Validatable {
+
     func getValue() -> Any? {
         return ["array"]
     }
+
 }

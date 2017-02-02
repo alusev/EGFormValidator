@@ -15,21 +15,21 @@ class UITextViewTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testErrorDisplayable() {
         let conforms = (UITextView.self as Any) is Validatable.Type
         XCTAssert(conforms)
     }
-    
+
     func testMethod() {
         let textView = UITextView()
         textView.text = "Some value"
         XCTAssertEqual(textView.text, textView.getValue() as? String)
     }
-    
+
 }

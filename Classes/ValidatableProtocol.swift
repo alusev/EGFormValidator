@@ -36,7 +36,7 @@ extension Validatable where Self: UIView {}
  A list of states of an object that conforms `Validatable` protocol:
 
  **normal**
- 
+
  The control has not been validated yet. This is default state
 
  **valid**

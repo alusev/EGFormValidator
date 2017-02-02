@@ -66,4 +66,5 @@ class ValidatorEmailTests: XCTestCase {
         }
         XCTAssertFalse(vc.validate(), "Condition implies that the field must be an email")
     }
+
 }

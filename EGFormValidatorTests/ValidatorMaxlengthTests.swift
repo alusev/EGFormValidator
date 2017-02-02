@@ -17,18 +17,16 @@ class ValidatorMaxlengthTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         textField = UITextField()
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    
+
     func testDefaultValue() {
         XCTAssertEqual(Int.max, textField.maxLength, "Default value is too short")
     }
-    
-    
+
     func testMaxlength() {
         textField.maxLength = 5
         textField.text = "qwe"
@@ -49,4 +47,5 @@ class ValidatorMaxlengthTests: XCTestCase {
         textField.limitLength(textField: textField)
         XCTAssertEqual(textField.maxLength, 15)
     }
+
 }
