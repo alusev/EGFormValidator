@@ -18,7 +18,7 @@ import UIKit
      - Returns: A control's value
      */
     func getValue() -> Any?
-    
+
     /**
      An _optional_ delegate method that gets called after validation to set its validation state
      - Parameter state: a state of the control after validation.
@@ -50,10 +50,10 @@ extension Validatable where Self: UIView {}
 @objc public enum ValidatableControlState: Int {
     /// The control has not been validated yet
     case normal = 0
-    
+
     /// The control has been validated and it's valid
     case valid
-    
+
     /// The control has been validated and it's not valid
     case error
 }

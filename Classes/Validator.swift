@@ -8,10 +8,8 @@
 
 import UIKit
 
-
 /// Declares custom validation method
 public typealias ValidatorPredicate = (Any?, [Any?]) -> Bool
-
 
 /// `Validator`
 public struct Validator {
@@ -49,7 +47,6 @@ public struct Validator {
 
     /**
      Performs validation of the control
-     
      - Returns: `True` if the control passes validation
      */
     public func validate() -> Bool {

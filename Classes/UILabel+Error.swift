@@ -13,7 +13,6 @@ extension UILabel: ValidationErrorDisplayable {
 
     /**
      MARK: - Validation Error Displayable protocol implementation
-     
      - Parameter errorMessage: an error message to be shown when a validator fails
      */
     public func setErrorMessage(errorMessage: String?) {
