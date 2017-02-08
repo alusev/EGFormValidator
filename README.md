@@ -1,6 +1,7 @@
 # EGFormValidator
 
 [![Swift][swift-badge]][swift-url]
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e7fcef8820dd4485bd8b7d21ba3a8cfa)](https://www.codacy.com/app/alusev/EGFormValidator?utm_source=github.com&utm_medium=referral&utm_content=alusev/EGFormValidator&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/alusev/EGFormValidator.svg?branch=master)](https://travis-ci.org/alusev/EGFormValidator)
 [![codecov](https://codecov.io/gh/alusev/EGFormValidator/branch/master/graph/badge.svg)](https://codecov.io/gh/alusev/EGFormValidator)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/alusev/EGFormValidator/blob/master/LICENSE)
