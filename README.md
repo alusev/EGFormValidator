@@ -1,11 +1,9 @@
 # EGFormValidator
 
-[![Swift][swift-badge]][swift-url]
+[![Swift](https://img.shields.io/badge/Swift-4.0-blue.svg)](https://swift.org)
 [![Build Status](https://travis-ci.org/alusev/EGFormValidator.svg?branch=master)](https://travis-ci.org/alusev/EGFormValidator)
 [![codecov](https://codecov.io/gh/alusev/EGFormValidator/branch/master/graph/badge.svg)](https://codecov.io/gh/alusev/EGFormValidator)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/alusev/EGFormValidator/blob/master/LICENSE)
-[swift-badge]: https://img.shields.io/badge/Swift-3.0-blue.svg
-[swift-url]: https://swift.org
 
 A simple form validation library written in Swift 3.0.
 
