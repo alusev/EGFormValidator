@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'EGFormValidator'
-  s.version          = '1.1.0'
-  s.summary          = 'A simple form validation library written in Swift 3.0.'
+  s.version          = '1.2.0'
+  s.summary          = 'A simple form validation library written in Swift 4.0.'
   s.description      = <<-DESC
 The EGFormValidator framework allows you to validate any input field in a convenient way and to display error absolutely anywhere you want.
 
