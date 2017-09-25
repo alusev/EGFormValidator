@@ -42,9 +42,8 @@ extension UITextField {
         }
         
         let selection = selectedTextRange
-        text = prospectiveText.substring(with:
-            Range<String.Index>(prospectiveText.startIndex ..< prospectiveText.index(prospectiveText.startIndex, offsetBy: maxLength))
-        )
+        let index = prospectiveText.index(prospectiveText.startIndex, offsetBy: maxLength)
+        text = String(prospectiveText[..<index])
         selectedTextRange = selection
     }
     
