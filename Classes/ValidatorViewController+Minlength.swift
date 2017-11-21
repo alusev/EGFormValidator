@@ -21,7 +21,7 @@ extension ValidatorViewController {
     private func MinlengthValidator(value: Any?, params: [Any?]) -> Bool {
         let minLength = params[0] as! Int
         
-        if let stringValue = value as? String, (stringValue.characters.count == 0 || stringValue.characters.count >= minLength) {
+        if let stringValue = value as? String, (stringValue.count == 0 || stringValue.count >= minLength) {
             return true
         }
         

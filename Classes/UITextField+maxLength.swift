@@ -37,7 +37,7 @@ extension UITextField {
      - Parameter textField: A textfield beeing edited
      */
     @objc func limitLength(textField: UITextField) {
-        guard let prospectiveText = textField.text, prospectiveText.characters.count > maxLength else {
+        guard let prospectiveText = textField.text, prospectiveText.count > maxLength else {
             return
         }
         
