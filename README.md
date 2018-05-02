@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/alusev/EGFormValidator/branch/master/graph/badge.svg)](https://codecov.io/gh/alusev/EGFormValidator)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/alusev/EGFormValidator/blob/master/LICENSE)
 
-A simple form validation library written in Swift 3.0.
+A simple form validation library written in Swift 4.0.
 
 1. [Features](#features)
 2. [Demo](#demo)
