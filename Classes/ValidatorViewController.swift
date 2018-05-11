@@ -104,7 +104,6 @@ open class ValidatorViewController: UIViewController, ValidatorController {
     
     public var validators: [Validator] = [Validator]()
     public var validatorConditions = [ValidatorCondition]()
- 
 }
 
 open class ValidatorTableViewController: UITableViewController, ValidatorController {
@@ -112,7 +111,6 @@ open class ValidatorTableViewController: UITableViewController, ValidatorControl
     
     public var validators: [Validator] = [Validator]()
     public var validatorConditions = [ValidatorCondition]()
-    
 }
 
 open class ValidatorTabBarController: UITabBarController, ValidatorController {
@@ -120,5 +118,4 @@ open class ValidatorTabBarController: UITabBarController, ValidatorController {
     
     public var validators: [Validator] = [Validator]()
     public var validatorConditions = [ValidatorCondition]()
-    
 }
