@@ -89,7 +89,7 @@
 		57DE78401E1AE93B00D5EE81 /* ValidatorDigitsOnlyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorDigitsOnlyTests.swift; sourceTree = "<group>"; };
 		57DE78421E1AEA5700D5EE81 /* ValidatorAlphaNumericTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorAlphaNumericTests.swift; sourceTree = "<group>"; };
 		F181858320A5C0F300212ECE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Classes/Info.plist; sourceTree = "<group>"; };
-		F181858520A5C17100212ECE /* ValidatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorController.swift; sourceTree = "<group>"; };
+		F181858520A5C17100212ECE /* ValidatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValidatorController.swift; path = Classes/ValidatorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
