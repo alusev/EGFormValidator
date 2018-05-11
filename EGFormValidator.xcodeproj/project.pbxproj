@@ -39,6 +39,7 @@
 		57DE783F1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE783E1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift */; };
 		57DE78411E1AE93B00D5EE81 /* ValidatorDigitsOnlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78401E1AE93B00D5EE81 /* ValidatorDigitsOnlyTests.swift */; };
 		57DE78431E1AEA5700D5EE81 /* ValidatorAlphaNumericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE78421E1AEA5700D5EE81 /* ValidatorAlphaNumericTests.swift */; };
+		F181858620A5C17100212ECE /* ValidatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181858520A5C17100212ECE /* ValidatorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,6 @@
 		57DE77631E1637A400D5EE81 /* ValidatorViewController+EqualTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+EqualTo.swift"; path = "Classes/ValidatorViewController+EqualTo.swift"; sourceTree = "<group>"; };
 		57DE77641E1637A400D5EE81 /* ValidatorViewController+Mandatory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+Mandatory.swift"; path = "Classes/ValidatorViewController+Mandatory.swift"; sourceTree = "<group>"; };
 		57DE77651E1637A400D5EE81 /* ValidatorViewController+Minlength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+Minlength.swift"; path = "Classes/ValidatorViewController+Minlength.swift"; sourceTree = "<group>"; };
-		57DE777F1E16394000D5EE81 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/latenal/Developer/EGFormValidator/Classes/Info.plist; sourceTree = "<absolute>"; };
 		57DE781F1E1982A000D5EE81 /* ValidatorViewController+AlphaNumeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ValidatorViewController+AlphaNumeric.swift"; path = "Classes/ValidatorViewController+AlphaNumeric.swift"; sourceTree = "<group>"; };
 		57DE78271E1AAE2F00D5EE81 /* EGFormValidatorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGFormValidatorTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		57DE78281E1AAE3000D5EE81 /* ValidatorVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorVCTests.swift; sourceTree = "<group>"; };
@@ -88,6 +88,8 @@
 		57DE783E1E1AE7C100D5EE81 /* ValidatorEqualToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorEqualToTests.swift; sourceTree = "<group>"; };
 		57DE78401E1AE93B00D5EE81 /* ValidatorDigitsOnlyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorDigitsOnlyTests.swift; sourceTree = "<group>"; };
 		57DE78421E1AEA5700D5EE81 /* ValidatorAlphaNumericTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorAlphaNumericTests.swift; sourceTree = "<group>"; };
+		F181858320A5C0F300212ECE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Classes/Info.plist; sourceTree = "<group>"; };
+		F181858520A5C17100212ECE /* ValidatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,9 +163,10 @@
 		57DE77761E1637AC00D5EE81 /* EGFormValidator */ = {
 			isa = PBXGroup;
 			children = (
-				57DE777F1E16394000D5EE81 /* Info.plist */,
+				F181858320A5C0F300212ECE /* Info.plist */,
 				57DE77561E1637A400D5EE81 /* EGFormValidator.h */,
 				57DE775F1E1637A400D5EE81 /* Validator.swift */,
+				F181858520A5C17100212ECE /* ValidatorController.swift */,
 				57DE77601E1637A400D5EE81 /* ValidatorViewController.swift */,
 				57DE77771E16386500D5EE81 /* Validator Protocols */,
 				57DE77781E16388600D5EE81 /* Protocol Implementation of Generic Controls */,
@@ -320,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Evgeny Gushchin";
 				TargetAttributes = {
 					57DE773B1E16372400D5EE81 = {
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F181858620A5C17100212ECE /* ValidatorController.swift in Sources */,
 				57DE776F1E1637A400D5EE81 /* Validator.swift in Sources */,
 				57DE77701E1637A400D5EE81 /* ValidatorViewController.swift in Sources */,
 				57DE77751E1637A400D5EE81 /* ValidatorViewController+Minlength.swift in Sources */,
@@ -439,6 +443,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -446,6 +451,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -498,6 +504,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -505,6 +512,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

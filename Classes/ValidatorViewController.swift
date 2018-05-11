@@ -8,15 +8,10 @@
 
 import UIKit
 
-/// Declares validation condition
-public typealias ValidatorCondition = () -> Bool
 
-/// Adds to `UIViewController` validation functionality
-open class ValidatorViewController: UIViewController {
-    // MARK - VALIDATION
-    private var validators = [Validator]()
-    private var validatorConditions = [ValidatorCondition]()
-
+/// Adds to subclasses of `UIViewController` validation functionality
+public extension ValidatorController where Self: UIViewController {
+    
     /**
      Adds a new unconditional validator to a validation list
      - Parameter validator: A validator to be added to the validation list
@@ -29,7 +24,7 @@ open class ValidatorViewController: UIViewController {
             return true
         }
     }
-
+    
     /**
      Adds a new conditional validator to a validation list
      - Parameter validator: A validator to be added to the validation list
@@ -43,37 +38,34 @@ open class ValidatorViewController: UIViewController {
         validators.append(validator)
         validatorConditions.append(condition)
     }
-
-    /// Read-only property that stores the first failed in case if you need to scroll up your view and to show the invalid control
-    public private(set) var firstFailedControl: UIView?
-
+    
     /**
      Execute all predicates of all validators i.e. performs validation of a form
      - Returns: Tells if _all validators_ are valid or not.
      */
     public func validate() -> Bool {
         var formIsValid = true
-
+        
         // a set of  invalidated controls
         var inValidatedControls = Set<UIView>()
         self.firstFailedControl = nil
-
+        
         for (index, validator) in validators.enumerated() {
             var isControlValid = false
-
+            
             // all controls should be UIViews so there shouldn't be any problem
             if let control = validator.control as? UIView {
-
+                
                 // validate it again only if it passed previous validation
                 if !inValidatedControls.contains(control) {
                     // the control is not validated yet
                     // or it has been already validated and it passed all its previus validations
-
+                    
                     // check conditions
                     if validatorConditions[index]() {
                         // get validation result
                         isControlValid = validator.validate()
-
+                        
                         if isControlValid {
                             // control is valid
                             validator.control?.setValidation?(state: .valid)
@@ -82,10 +74,10 @@ open class ValidatorViewController: UIViewController {
                             // control is not valid
                             validator.control?.setValidation?(state: .error)
                             validator.errorPlaceholder?.setErrorMessage(errorMessage: validator.errorMessage)
-
+                            
                             // add the control to inValidatedControls set
                             inValidatedControls.insert(control)
-
+                            
                             if self.firstFailedControl == nil {
                                 self.firstFailedControl = control
                             }
@@ -99,11 +91,34 @@ open class ValidatorViewController: UIViewController {
                     }
                 }
             }
-
+            
             // add the current control validation results to output
             formIsValid = formIsValid && isControlValid
         }
         return formIsValid
     }
+}
 
+open class ValidatorViewController: UIViewController, ValidatorController {
+    public var firstFailedControl: UIView?
+    
+    public var validators: [Validator] = [Validator]()
+    public var validatorConditions = [ValidatorCondition]()
+ 
+}
+
+open class ValidatorTableViewController: UITableViewController, ValidatorController {
+    public var firstFailedControl: UIView?
+    
+    public var validators: [Validator] = [Validator]()
+    public var validatorConditions = [ValidatorCondition]()
+    
+}
+
+open class ValidatorTabBarController: UITabBarController, ValidatorController {
+    public var firstFailedControl: UIView?
+    
+    public var validators: [Validator] = [Validator]()
+    public var validatorConditions = [ValidatorCondition]()
+    
 }
