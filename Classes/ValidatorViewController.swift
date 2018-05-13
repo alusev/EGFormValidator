@@ -35,7 +35,8 @@ public extension ValidatorController where Self: UIViewController {
      If condition returns `false` the validator will mark the field as valid.
      */
     public func add(validator: Validator, condition: @escaping ValidatorCondition) {
-        validators.append(validator)
+        let weakValidator = WeakRef(value: validator)
+        validators.append(weakValidator)
         validatorConditions.append(condition)
     }
     
@@ -54,7 +55,8 @@ public extension ValidatorController where Self: UIViewController {
             var isControlValid = false
             
             // all controls should be UIViews so there shouldn't be any problem
-            if let control = validator.control as? UIView {
+            if let validator = validator.value,
+                let control = validator.control as? UIView {
                 
                 // validate it again only if it passed previous validation
                 if !inValidatedControls.contains(control) {
@@ -102,20 +104,20 @@ public extension ValidatorController where Self: UIViewController {
 open class ValidatorViewController: UIViewController, ValidatorController {
     public var firstFailedControl: UIView?
     
-    public var validators: [Validator] = [Validator]()
+    public var validators: [WeakRef<Validator>] = [WeakRef<Validator>]()
     public var validatorConditions = [ValidatorCondition]()
 }
 
 open class ValidatorTableViewController: UITableViewController, ValidatorController {
     public var firstFailedControl: UIView?
     
-    public var validators: [Validator] = [Validator]()
+    public var validators: [WeakRef<Validator>] = [WeakRef<Validator>]()
     public var validatorConditions = [ValidatorCondition]()
 }
 
 open class ValidatorTabBarController: UITabBarController, ValidatorController {
     public var firstFailedControl: UIView?
     
-    public var validators: [Validator] = [Validator]()
+    public var validators: [WeakRef<Validator>] = [WeakRef<Validator>]()
     public var validatorConditions = [ValidatorCondition]()
 }
