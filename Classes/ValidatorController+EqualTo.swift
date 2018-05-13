@@ -1,5 +1,5 @@
 //
-//  ValidatorViewController+EqualTo.swift
+//  ValidatorController+EqualTo.swift
 //  EGFormValidator
 //
 //  Created by Evgeny Gushchin on 09/12/16.
@@ -9,7 +9,7 @@
 import UIKit
 
 /// The extension adds EqualTo validator
-public extension ValidatorViewController {
+public extension ValidatorController {
     /**
      Validator's predicate: verifies if given value is equal to another control's value
      

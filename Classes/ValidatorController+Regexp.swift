@@ -1,5 +1,5 @@
 //
-//  ValidatorViewController+Regexp.swift
+//  ValidatorController+Regexp.swift
 //  EGFormValidator
 //
 //  Created by Evgeny Gushchin on 08/01/17.
@@ -9,7 +9,7 @@
 import UIKit
 
 /// The extension adds Regexp validator
-public extension ValidatorViewController {
+public extension ValidatorController {
     /**
      Validator's predicate: verifies if a given value matches the pattern
      
