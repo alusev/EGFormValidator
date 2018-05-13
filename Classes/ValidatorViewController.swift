@@ -35,9 +35,11 @@ public extension ValidatorController where Self: UIViewController {
      If condition returns `false` the validator will mark the field as valid.
      */
     public func add(validator: Validator, condition: @escaping ValidatorCondition) {
-        let weakValidator = WeakRef(value: validator)
-        validators.append(weakValidator)
+        //        let weakValidator = WeakRef(value: validator)
+        //        debugPrint(weakValidator, weakValidator.value, validator)
+        validators.append(validator)
         validatorConditions.append(condition)
+        debugPrint(validators.count, validatorConditions.count)
     }
     
     /**
@@ -53,10 +55,11 @@ public extension ValidatorController where Self: UIViewController {
         
         for (index, validator) in validators.enumerated() {
             var isControlValid = false
-            
+            //            debugPrint(validator, validator.value)
             // all controls should be UIViews so there shouldn't be any problem
-            if let validator = validator.value,
-                let control = validator.control as? UIView {
+            let val = validator
+            if /*let val = validator.value,*/
+                let control = val.control as? UIView {
                 
                 // validate it again only if it passed previous validation
                 if !inValidatedControls.contains(control) {
@@ -66,16 +69,16 @@ public extension ValidatorController where Self: UIViewController {
                     // check conditions
                     if validatorConditions[index]() {
                         // get validation result
-                        isControlValid = validator.validate()
+                        isControlValid = val.validate()
                         
                         if isControlValid {
                             // control is valid
-                            validator.control?.setValidation?(state: .valid)
-                            validator.errorPlaceholder?.setErrorMessage(errorMessage: nil)
+                            val.control?.setValidation?(state: .valid)
+                            val.errorPlaceholder?.setErrorMessage(errorMessage: nil)
                         } else {
                             // control is not valid
-                            validator.control?.setValidation?(state: .error)
-                            validator.errorPlaceholder?.setErrorMessage(errorMessage: validator.errorMessage)
+                            val.control?.setValidation?(state: .error)
+                            val.errorPlaceholder?.setErrorMessage(errorMessage: val.errorMessage)
                             
                             // add the control to inValidatedControls set
                             inValidatedControls.insert(control)
@@ -88,8 +91,8 @@ public extension ValidatorController where Self: UIViewController {
                         // validator was executed
                         // control is valid
                         isControlValid = true
-                        validator.control?.setValidation?(state: .valid)
-                        validator.errorPlaceholder?.setErrorMessage(errorMessage: nil)
+                        val.control?.setValidation?(state: .valid)
+                        val.errorPlaceholder?.setErrorMessage(errorMessage: nil)
                     }
                 }
             }
@@ -104,20 +107,38 @@ public extension ValidatorController where Self: UIViewController {
 open class ValidatorViewController: UIViewController, ValidatorController {
     public var firstFailedControl: UIView?
     
-    public var validators: [WeakRef<Validator>] = [WeakRef<Validator>]()
+    public var validators: [Validator] = [Validator]()
     public var validatorConditions = [ValidatorCondition]()
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        validators = []
+        validatorConditions = []
+    }
 }
 
 open class ValidatorTableViewController: UITableViewController, ValidatorController {
     public var firstFailedControl: UIView?
     
-    public var validators: [WeakRef<Validator>] = [WeakRef<Validator>]()
+    public var validators: [Validator] = [Validator]()
     public var validatorConditions = [ValidatorCondition]()
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        validators = []
+        validatorConditions = []
+    }
 }
 
 open class ValidatorTabBarController: UITabBarController, ValidatorController {
     public var firstFailedControl: UIView?
     
-    public var validators: [WeakRef<Validator>] = [WeakRef<Validator>]()
+    public var validators: [Validator] = [Validator]()
     public var validatorConditions = [ValidatorCondition]()
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        validators = []
+        validatorConditions = []
+    }
 }
