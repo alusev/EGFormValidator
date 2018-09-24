@@ -1,11 +1,11 @@
 # EGFormValidator
 
-[![Swift](https://img.shields.io/badge/Swift-4.0-blue.svg)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-4.2-blue.svg)](https://swift.org)
 [![Build Status](https://travis-ci.org/alusev/EGFormValidator.svg?branch=master)](https://travis-ci.org/alusev/EGFormValidator)
 [![codecov](https://codecov.io/gh/alusev/EGFormValidator/branch/master/graph/badge.svg)](https://codecov.io/gh/alusev/EGFormValidator)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/alusev/EGFormValidator/blob/master/LICENSE)
 
-A simple form validation library written in Swift 4.0.
+A simple form validation library written in Swift 4.2.
 
 1. [Features](#features)
 2. [Demo](#demo)
@@ -71,7 +71,7 @@ $ cd /path/to/MyProject
 $ touch Podfile
 $ edit Podfile
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'TargetName' do
