@@ -30,5 +30,6 @@ Add a condition when a validator should be applied.
   s.source           = { :git => 'https://github.com/alusev/EGFormValidator.git', :tag => s.version }
   s.ios.deployment_target = '9.0'
   s.source_files = 'Classes/*'
+  s.exclude_files = 'Classes/*.plist'
   s.frameworks = 'UIKit'
 end
